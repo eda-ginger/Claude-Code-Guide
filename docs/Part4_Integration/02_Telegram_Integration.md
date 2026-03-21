@@ -236,3 +236,29 @@ plugin:channels telegram@claude-plugins/official
 - **외출 중 작업 지시**: 텔레그램으로 "테스트 실행해줘", "빌드 상태 확인해줘" 등 원격 작업 가능
 - **파일 전송**: 텔레그램에서 이미지나 파일을 보내면 Claude가 확인하고 처리 가능
 - **tmux와 함께 사용**: [tmux 가이드](../Part3_Advanced/02_Tmux_and_Agent_Teams.md)의 tmux 설정과 함께 사용하면 Claude Code 세션을 백그라운드로 유지하면서 텔레그램으로 지시 가능
+
+### 한 줄 실행 alias 설정 (`cl-claw`)
+
+매번 긴 명령어를 입력하는 대신, alias를 등록하면 `cl-claw` 한 줄로 텔레그램 채널이 연결된 Claude Code를 tmux 세션으로 실행할 수 있습니다.
+
+`~/.bashrc` (또는 `~/.zshrc`)에 아래 내용을 추가합니다:
+
+```bash
+alias cl-claw='if [ -z "$TMUX" ]; then tmux has-session -t claudeclaw 2>/dev/null || tmux new-session -d -s claudeclaw "claude --channels plugin:telegram@claude-plugins-official --dangerously-skip-permissions"; tmux attach -t claudeclaw; else claude --channels plugin:telegram@claude-plugins-official --dangerously-skip-permissions; fi'
+```
+
+추가 후 적용:
+
+```bash
+source ~/.bashrc
+```
+
+**동작 방식:**
+
+| 상황 | 동작 |
+|------|------|
+| tmux 밖에서 실행 | `claudeclaw` 이름의 tmux 세션을 생성하고 접속 |
+| 이미 세션이 있으면 | 기존 세션에 바로 접속 |
+| tmux 안에서 실행 | 현재 tmux 창에서 바로 Claude Code 실행 |
+
+이제 터미널에서 `cl-claw`만 입력하면 텔레그램 연동 Claude Code가 바로 시작됩니다.
