@@ -1,4 +1,4 @@
-# Step 14: MoAI-ADK — AI 자율 개발 환경
+# Step 12: MoAI-ADK — AI 자율 개발 환경
 
 이 문서는 **MoAI-ADK(Agentic Development Kit)** 의 개요와 설치 준비 사항을 정리합니다.
 
