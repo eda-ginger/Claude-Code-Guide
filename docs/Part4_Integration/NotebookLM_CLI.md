@@ -1,4 +1,4 @@
-# Step 10: NotebookLM CLI 연동 가이드
+# NotebookLM CLI 연동 가이드
 
 이 문서에서는 Google NotebookLM을 **터미널에서 CLI로 사용**하고, Claude Code에 **AI Skill로 등록**하여 자연어로 조작하는 방법을 안내합니다.
 

@@ -1,4 +1,4 @@
-# Step 11: 텔레그램 연동 가이드 (Claude Code Channels)
+# 텔레그램 연동 가이드 (Claude Code Channels)
 
 이 문서에서는 Claude Code의 **Channels** 기능을 활용하여 텔레그램에서 직접 Claude에게 작업을 지시하는 방법을 안내합니다.
 
@@ -18,7 +18,7 @@
 
 이 저장소를 clone하면 `.claude/skills/claudeclaw/SKILL.md` 스킬이 자동으로 포함됩니다. Claude Code에서 `/claudeclaw`를 입력하면 아래 가이드를 Claude가 단계별로 안내해 줍니다.
 
-> 스킬에 대한 자세한 내용은 [Step 7: 고급 기능](./Step7_Advanced_Features.md)을 참고하세요.
+> 스킬에 대한 자세한 내용은 [고급 기능 가이드](../Part3_Advanced/Advanced_Features.md)를 참고하세요.
 
 ---
 
@@ -235,4 +235,4 @@ plugin:channels telegram@claude-plugins/official
 
 - **외출 중 작업 지시**: 텔레그램으로 "테스트 실행해줘", "빌드 상태 확인해줘" 등 원격 작업 가능
 - **파일 전송**: 텔레그램에서 이미지나 파일을 보내면 Claude가 확인하고 처리 가능
-- **tmux와 함께 사용**: [Step 8](./Step8_Tmux_and_Agent_Teams.md)의 tmux 설정과 함께 사용하면 Claude Code 세션을 백그라운드로 유지하면서 텔레그램으로 지시 가능
+- **tmux와 함께 사용**: [tmux 가이드](../Part3_Advanced/Tmux_and_Agent_Teams.md)의 tmux 설정과 함께 사용하면 Claude Code 세션을 백그라운드로 유지하면서 텔레그램으로 지시 가능

@@ -1,4 +1,4 @@
-# Step 4: Git 워크플로 가이드
+# Git 워크플로 가이드
 
 이 문서에서는 Claude Code를 활용한 **Git 커밋, 브랜치 관리, Pull Request 생성, 코드 리뷰** 등 실전 Git 워크플로를 안내합니다.
 

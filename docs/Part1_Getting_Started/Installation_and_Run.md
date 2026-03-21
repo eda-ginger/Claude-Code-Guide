@@ -1,4 +1,4 @@
-# Step 1: Claude Code 설치 및 실행 가이드
+# Claude Code 설치 및 실행 가이드
 
 이 문서에서는 Anthropic에서 제공하는 공식 CLI 기반 AI 코딩 어시스턴트인 **Claude Code**의 설치 및 기본 실행 방법을 안내합니다.
 
