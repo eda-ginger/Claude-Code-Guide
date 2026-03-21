@@ -1,0 +1,5 @@
+# Claude Code 로컬 설정
+.claude/settings.local.json
+
+# Telegram 채널 인증 정보
+.claude/channels/
