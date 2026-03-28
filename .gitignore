@@ -3,3 +3,6 @@
 
 # Telegram 채널 인증 정보
 .claude/channels/
+
+# 대용량 미디어 파일
+*.mp3

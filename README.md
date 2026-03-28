@@ -1,6 +1,6 @@
 # Claude Code Guide
 
-> **Claude Code**의 설치부터 고급 활용까지, 한국어로 정리한 실전 가이드 모음
+> **Claude Code**의 설치부터 실전 환경 구축까지, 한국어로 정리한 실전 가이드 모음
 
 [![Claude Code](https://img.shields.io/badge/Claude_Code-Guide-blueviolet)](https://docs.anthropic.com/en/docs/claude-code)
 [![Korean](https://img.shields.io/badge/lang-한국어-blue)](#)
@@ -32,55 +32,40 @@ Claude-Code-Guide/
 │       ├── session-pack/              # 세션 자동 정리
 │       └── nlm-skill/                 # NotebookLM CLI 가이드
 └── docs/
-    ├── Part1_Getting_Started/         # 시작하기
-    ├── Part2_Core_Workflow/           # 핵심 워크플로
-    ├── Part3_Advanced/                # 고급 활용
-    └── Part4_Integration/             # 외부 연동
+    ├── Part1_Basics/                  # 기본 가이드 (읽고 이해)
+    └── Part2_Practical_Setup/         # 실전 환경 구축 (세팅 + 활용)
 ```
 
 ---
 
 ## 가이드 목차
 
-### Part 1: 시작하기
+### Part 1: 기본 가이드
 
-> Claude Code 설치부터 첫 프로젝트 설정까지
-
-| # | 제목 | 설명 |
-|:-:|------|------|
-| 01 | [설치 및 실행](./docs/Part1_Getting_Started/01_Installation_and_Run.md) | Claude Code 설치, 인증, 첫 실행 |
-| 02 | [기본 사용법](./docs/Part1_Getting_Started/02_Basic_Usage.md) | 프롬프트 작성, 파일 편집, 기본 명령어 |
-| 03 | [프로젝트 설정](./docs/Part1_Getting_Started/03_Project_Setup.md) | CLAUDE.md, 메모리, 프로젝트 구조 설정 |
-
-### Part 2: 핵심 워크플로
-
-> 일상적인 개발 작업에 Claude Code를 활용하는 패턴
+> Claude Code의 개념과 사용법을 읽고 이해하는 문서
 
 | # | 제목 | 설명 |
 |:-:|------|------|
-| 01 | [Git 워크플로](./docs/Part2_Core_Workflow/01_Git_Workflow.md) | 커밋, PR, 코드 리뷰 자동화 |
-| 02 | [컨텍스트 윈도우와 비용 최적화](./docs/Part2_Core_Workflow/02_Context_and_Cost.md) | 토큰 관리, 세션 인수인계, 프롬프트 캐싱 |
-| 03 | [실전 팁과 모범 사례](./docs/Part2_Core_Workflow/03_Tips_and_Best_Practices.md) | 프롬프트 패턴, 세션 관리, 자동화, 실수 회피 |
+| 01 | [설치 및 실행](./docs/Part1_Basics/01_Installation_and_Run.md) | Claude Code 설치, 인증, 첫 실행 |
+| 02 | [기본 사용법](./docs/Part1_Basics/02_Basic_Usage.md) | 프롬프트 작성, 파일 편집, 기본 명령어 |
+| 03 | [프로젝트 설정](./docs/Part1_Basics/03_Project_Setup.md) | CLAUDE.md, 메모리, 프로젝트 구조 설정 |
+| 04 | [컨텍스트 윈도우와 비용 최적화](./docs/Part1_Basics/04_Context_and_Cost.md) | 토큰 관리, 세션 인수인계, 프롬프트 캐싱 |
+| 05 | [사용 원칙과 모범 사례](./docs/Part1_Basics/05_Tips_and_Best_Practices.md) | 프롬프트 작성법, 세션 관리, 모델 선택, 실수 회피 |
 
-### Part 3: 고급 활용
+### Part 2: 실전 환경 구축
 
-> Claude Code의 확장 기능과 파워 유저 팁
-
-| # | 제목 | 설명 |
-|:-:|------|------|
-| 01 | [고급 기능 — MCP, 스킬, 훅](./docs/Part3_Advanced/01_Advanced_Features.md) | MCP 서버, 커스텀 슬래시 명령, 스킬, 훅 |
-| 02 | [tmux와 에이전트 팀](./docs/Part3_Advanced/02_Tmux_and_Agent_Teams.md) | 멀티 세션, 에이전트 병렬 실행 |
-| 03 | [상태 표시줄 커스터마이징](./docs/Part3_Advanced/03_Status_Line.md) | Status Line 설정과 테마 |
-
-### Part 4: 외부 연동
-
-> Claude Code를 다른 서비스와 연결하여 확장하기
+> Claude에게 문서를 보여주면 환경을 세팅하고 사용법까지 안내하는 문서
 
 | # | 제목 | 설명 |
 |:-:|------|------|
-| 01 | [NotebookLM CLI 연동](./docs/Part4_Integration/01_NotebookLM_CLI.md) | nlm CLI로 노트북 자동화 |
-| 02 | [텔레그램 연동](./docs/Part4_Integration/02_Telegram_Integration.md) | Channels로 텔레그램에서 Claude 원격 제어 |
-| 03 | [MoAI-ADK](./docs/Part4_Integration/03_MoAI_ADK.md) | AI 자율 개발 환경 소개 및 설치 준비 |
+| 01 | [고급 기능 — MCP, 스킬, 훅](./docs/Part2_Practical_Setup/01_Advanced_Features.md) | MCP 서버, 커스텀 슬래시 명령, 스킬, 훅 |
+| 02 | [상태 표시줄 커스터마이징](./docs/Part2_Practical_Setup/02_Status_Line.md) | Status Line 설정과 테마 |
+| 03 | [tmux와 에이전트 팀](./docs/Part2_Practical_Setup/03_Tmux_and_Agent_Teams.md) | 멀티 세션, 에이전트 병렬 실행 |
+| 04 | [멀티 머신 병렬 작업](./docs/Part2_Practical_Setup/04_Multi_Session_Workflow.md) | Worktree + Hook + PR 조합으로 충돌 없는 병렬 작업 |
+| 05 | [텔레그램 연동](./docs/Part2_Practical_Setup/05_Telegram_Integration.md) | Channels로 텔레그램에서 Claude 원격 제어 |
+| 06 | [NotebookLM CLI 연동](./docs/Part2_Practical_Setup/06_NotebookLM_CLI.md) | nlm CLI로 노트북 자동화 |
+| 07 | [MoAI-ADK](./docs/Part2_Practical_Setup/07_MoAI_ADK.md) | AI 자율 개발 환경 소개 및 설치 준비 |
+| 08 | [에이전트 팀 문헌 자동 수집](./docs/Part2_Practical_Setup/08_Research_Automation.md) | Agent Teams로 논문 수집 + PDF 다운로드 자동화 |
 
 ---
 
@@ -122,14 +107,14 @@ claude
 
 ### 4. 가이드 따라하기
 
-Part 1부터 순서대로 읽어보세요. 각 문서는 독립적으로도 참고할 수 있습니다.
+Part 1을 읽고 기본을 익힌 후, Part 2의 문서를 Claude에게 보여주면서 환경을 구축해보세요.
 
 ---
 
 ## 사전 요구사항
 
 - **Node.js** 18 이상
-- **Claude Code CLI** ([설치 가이드](./docs/Part1_Getting_Started/01_Installation_and_Run.md))
+- **Claude Code CLI** ([설치 가이드](./docs/Part1_Basics/01_Installation_and_Run.md))
 - **Anthropic 구독** (Pro, Max, 또는 API 키)
 
 ---
