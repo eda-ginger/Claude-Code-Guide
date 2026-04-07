@@ -73,6 +73,7 @@ Claude-Code-Guide/
 |:-:|------|------|
 | 01 | [NotebookLM CLI 연동](./docs/Part3_Research/01_NotebookLM_CLI.md) | nlm CLI로 노트북 자동화 |
 | 02 | [에이전트 팀 문헌 자동 수집](./docs/Part3_Research/02_Research_Automation.md) | Agent Teams로 논문 수집 + PDF 다운로드 자동화 |
+| 03 | [LLM-Wiki — AI 지식 베이스 구축](./docs/Part3_Research/03_LLM_Wiki.md) | Karpathy's LLM-Wiki + Claude Code Hooks로 자가 진화형 메모리 |
 
 ### Part 4: 일상·생활 활용
 
