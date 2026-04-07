@@ -33,7 +33,9 @@ Claude-Code-Guide/
 │       └── nlm-skill/                 # NotebookLM CLI 가이드
 └── docs/
     ├── Part1_Basics/                  # 기본 가이드 (읽고 이해)
-    └── Part2_Practical_Setup/         # 실전 환경 구축 (세팅 + 활용)
+    ├── Part2_Practical_Setup/         # 실전 환경 구축 (세팅 + 활용)
+    ├── Part3_Research/                # 연구·학습 활용
+    └── Part4_Daily_Life/              # 일상·생활 활용
 ```
 
 ---
@@ -62,10 +64,25 @@ Claude-Code-Guide/
 | 02 | [상태 표시줄 커스터마이징](./docs/Part2_Practical_Setup/02_Status_Line.md) | Status Line 설정과 테마 |
 | 03 | [tmux와 에이전트 팀](./docs/Part2_Practical_Setup/03_Tmux_and_Agent_Teams.md) | 멀티 세션, 에이전트 병렬 실행 |
 | 04 | [멀티 머신 병렬 작업](./docs/Part2_Practical_Setup/04_Multi_Session_Workflow.md) | Worktree + Hook + PR 조합으로 충돌 없는 병렬 작업 |
-| 05 | [텔레그램 연동](./docs/Part2_Practical_Setup/05_Telegram_Integration.md) | Channels로 텔레그램에서 Claude 원격 제어 |
-| 06 | [NotebookLM CLI 연동](./docs/Part2_Practical_Setup/06_NotebookLM_CLI.md) | nlm CLI로 노트북 자동화 |
-| 07 | [MoAI-ADK](./docs/Part2_Practical_Setup/07_MoAI_ADK.md) | AI 자율 개발 환경 소개 및 설치 준비 |
-| 08 | [에이전트 팀 문헌 자동 수집](./docs/Part2_Practical_Setup/08_Research_Automation.md) | Agent Teams로 논문 수집 + PDF 다운로드 자동화 |
+
+### Part 3: 연구·학습 활용
+
+> Claude Code를 연구 및 학습 워크플로에 활용하는 문서
+
+| # | 제목 | 설명 |
+|:-:|------|------|
+| 01 | [NotebookLM CLI 연동](./docs/Part3_Research/01_NotebookLM_CLI.md) | nlm CLI로 노트북 자동화 |
+| 02 | [에이전트 팀 문헌 자동 수집](./docs/Part3_Research/02_Research_Automation.md) | Agent Teams로 논문 수집 + PDF 다운로드 자동화 |
+
+### Part 4: 일상·생활 활용
+
+> Claude Code를 일상생활과 다양한 서비스에 활용하는 문서
+
+| # | 제목 | 설명 |
+|:-:|------|------|
+| 01 | [텔레그램 연동](./docs/Part4_Daily_Life/01_Telegram_Integration.md) | Channels로 텔레그램에서 Claude 원격 제어 |
+| 02 | [MoAI-ADK](./docs/Part4_Daily_Life/02_MoAI_ADK.md) | AI 자율 개발 환경 소개 및 설치 준비 |
+| 03 | [k-skill — 한국 생활 스킬](./docs/Part4_Daily_Life/03_K_Skill.md) | SRT 예매, 택배 조회, 미세먼지 등 25개+ 한국 생활 스킬 |
 
 ---
 
