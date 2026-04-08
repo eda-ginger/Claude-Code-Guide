@@ -54,7 +54,7 @@ Claude가 알아서 OS를 판단하고 설치합니다:
 LaTeX 설치가 끝났으면, 실습 프로젝트를 세팅합니다:
 
 ```
-docs/Part3-Research/starter-kit/ 을 ~/my-mini-review 로 복사하고
+docs/Part2-Research/starter-kit/ 을 ~/my-mini-review 로 복사하고
 그 폴더로 이동해줘.
 ```
 

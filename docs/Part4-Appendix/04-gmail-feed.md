@@ -2,7 +2,7 @@
 
 > Gmail MCP를 연동하여 뉴스레터를 자동으로 읽고 Obsidian 피드 노트에 요약 카드로 정리하는 워크플로
 
-이 가이드는 [대학원생의 Obsidian 볼트](../Part4-Life/01-obsidian-vault.md)의 피드 시스템을 Gmail 뉴스레터로 확장하는 방법을 다룹니다. NotebookLM 피드와 같은 노트에 통합하여, 한 곳에서 모든 정보를 모아볼 수 있습니다.
+이 가이드는 [대학원생의 Obsidian 볼트](../Part3-Life/01-obsidian-vault.md)의 피드 시스템을 Gmail 뉴스레터로 확장하는 방법을 다룹니다. NotebookLM 피드와 같은 노트에 통합하여, 한 곳에서 모든 정보를 모아볼 수 있습니다.
 
 ---
 

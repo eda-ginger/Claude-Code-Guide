@@ -119,7 +119,7 @@ alias cl-claw='clclaw'
 프로젝트 B/.claude/channels/telegram/.env  →  봇 B
 ```
 
-> 텔레그램 봇 생성부터 설정까지의 상세 가이드는 [Part5-Appendix/telegram](../Part5-Appendix/02-telegram.md)을 참고하세요.
+> 텔레그램 봇 생성부터 설정까지의 상세 가이드는 [Part4-Appendix/telegram](../Part4-Appendix/02-telegram.md)을 참고하세요.
 
 ---
 
