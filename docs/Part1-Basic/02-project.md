@@ -108,37 +108,69 @@ secrets/
 
 ## 5. 스킬 — 반복 작업의 SOP
 
-스킬은 자주 하는 작업을 **마크다운 파일로 정의**해두고 슬래시 명령으로 실행하는 기능입니다. 사람으로 치면 업무 매뉴얼(SOP)과 같습니다.
+스킬은 자주 하는 작업을 **마크다운 파일로 정의**해두고 슬래시 명령으로 실행하는 기능입니다. 사람으로 치면 업무 매뉴얼(SOP)과 같습니다. CLAUDE.md와 마찬가지로 "부탁"이지만, 구체적인 절차가 명시되어 있어 따르는 확률이 높습니다.
+
+### 설정 방법
 
 `.claude/commands/`에 마크다운 파일을 만들면 그 파일명이 슬래시 명령이 됩니다.
 
 ```
-.claude/commands/review.md  →  /review 로 실행
+.claude/
+├── commands/    ← 단순 프롬프트 (1파일)
+│   ├── deploy.md      →  /deploy
+│   └── test-all.md    →  /test-all
+└── skills/      ← 복잡한 워크플로 (에이전트 정의 포함)
+    └── session-pack/
+        └── SKILL.md
 ```
 
-파일 안에는 에이전트가 따라야 할 절차가 적혀 있습니다. 에이전트는 이것을 읽고 단계별로 수행합니다. CLAUDE.md와 마찬가지로 "부탁"이지만, 구체적인 절차가 명시되어 있어 따르는 확률이 높습니다.
+**예시: `.claude/commands/deploy.md`**
 
-> 스킬의 구체적인 설정 방법은 [04-setup.md](./04-setup.md)에서 다룹니다.
+```markdown
+배포 전 체크리스트를 수행합니다:
+1. 모든 테스트를 실행하고 통과하는지 확인
+2. 빌드가 성공하는지 확인
+3. 변경사항을 main 브랜치에 머지
+4. 배포 스크립트를 실행
+```
+
+> `.claude/commands/`와 `.claude/skills/` 폴더를 Git에 커밋하면 팀원 모두가 같은 명령어를 사용할 수 있습니다.
 
 ---
 
 ## 6. MCP — 외부 도구 연결
 
-MCP(Model Context Protocol)는 에이전트가 **외부 서비스에 접근할 수 있게 해주는 연결 통로**입니다.
+MCP(Model Context Protocol)는 에이전트가 **외부 서비스에 접근할 수 있게 해주는 연결 통로**입니다. 부탁이나 강제가 아닌 **능력 확장**에 해당합니다.
 
 ```
 [에이전트] ←→ [MCP 서버] ←→ [외부 서비스: NotebookLM, 텔레그램, GitHub, DB ...]
 ```
 
-MCP 서버를 `settings.json`에 등록하면 에이전트가 해당 서비스의 기능을 도구처럼 사용할 수 있습니다. 부탁이나 강제가 아닌 **능력 확장**에 해당합니다.
+### 설정 방법
 
-> MCP의 구체적인 설정 방법은 [04-setup.md](./04-setup.md)에서 다룹니다.
+`settings.json`에 MCP 서버를 등록합니다:
+
+```json
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_TOKEN": "ghp_xxxxxxxxxxxx"
+      }
+    }
+  }
+}
+```
+
+또는 Claude Code 내에서 `/mcp` 명령으로 대화형 설정도 가능합니다.
 
 ---
 
 ## 7. Hook — 자동 실행 장치
 
-Hook은 **특정 시점에 자동으로 실행되는 스크립트**입니다. CLAUDE.md가 "부탁"이라면, Hook은 **"강제"**입니다. `settings.json`에서 정의합니다.
+Hook은 **특정 시점에 자동으로 실행되는 스크립트**입니다. CLAUDE.md가 "부탁"이라면, Hook은 **"강제"**입니다.
 
 ### 주요 Hook 시점
 
@@ -150,14 +182,31 @@ Hook은 **특정 시점에 자동으로 실행되는 스크립트**입니다. CL
 | `PreCompact` | 컨텍스트 압축 전 | 대화 요약 저장 |
 | `SessionEnd` | 세션 종료 시 | 인수인계 자동 생성 |
 
+### 설정 방법
+
+`settings.json`에 정의합니다:
+
+```json
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "command": "npm run lint --fix $CLAUDE_FILE_PATH"
+      }
+    ]
+  }
+}
+```
+
+`matcher`를 생략하면 모든 도구 호출에 대해 실행됩니다.
+
 ### 부탁 vs 강제
 
 | 방식 | 예시 | 결과 |
 |------|------|------|
 | CLAUDE.md (부탁) | "커밋 전에 테스트를 실행해줘" | 잊을 수 있음 |
 | Hook (강제) | PreToolUse에서 테스트 실패 시 차단 | 시스템이 막으므로 실수 불가능 |
-
-> Hook의 구체적인 설정 방법은 [04-setup.md](./04-setup.md)에서 다룹니다.
 
 ---
 
