@@ -166,4 +166,18 @@ claude -p "package.json의 의존성 목록" --output-format json
 ```
 
 ---
+
+## 5. 상태 표시줄 (Status Line)
+
+Claude Code 하단에 컨텍스트 사용량, 비용, Git 상태 등을 실시간으로 표시할 수 있습니다. 가장 간단한 설정법:
+
+```
+> /statusline 모델 이름과 컨텍스트 사용률을 프로그레스 바로 보여줘
+```
+
+이 한 줄이면 Claude Code가 자동으로 스크립트를 생성하고 설정까지 완료합니다. 상태 표시줄은 로컬에서 실행되므로 API 토큰을 소비하지 않습니다.
+
+> 수동 설정, 예제 스크립트, JSON 필드 목록 등 상세 내용은 [Part5-Reference/statusline](../Part5-Reference/01-statusline.md)을 참고하세요.
+
+---
 > 💡 **Tip:** 커스텀 슬래시 명령어와 Hooks를 조합하면, 프로젝트에 특화된 자동화 워크플로를 구축할 수 있습니다. 예를 들어 `/deploy` 명령 + PostToolUse Hook으로 배포 후 자동 알림을 설정할 수 있습니다.

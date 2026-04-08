@@ -33,9 +33,10 @@ Claude-Code-Guide/
 │       └── nlm-skill/                 # NotebookLM CLI 가이드
 └── docs/
     ├── Part1-Basic/                  # 기본 가이드 (읽고 이해)
-    ├── Part2-Setup/         # 실전 환경 구축 (세팅 + 활용)
-    ├── Part3-Research/                # 연구·학습 활용
-    └── Part4-Life/              # 일상·생활 활용
+    ├── Part2-Setup/                  # 실전 환경 구축
+    ├── Part3-Research/               # 연구·학습 활용
+    ├── Part4-Life/                   # 일상·생활 활용
+    └── Part5-Reference/              # 부록·레퍼런스
 ```
 
 ---
@@ -48,11 +49,9 @@ Claude-Code-Guide/
 
 | # | 제목 | 설명 |
 |:-:|------|------|
-| 01 | [설치 및 실행](./docs/Part1-Basic/01-install.md) | Claude Code 설치, 인증, 첫 실행 |
-| 02 | [기본 사용법](./docs/Part1-Basic/02-usage.md) | 프롬프트 작성, 파일 편집, 기본 명령어 |
-| 03 | [프로젝트 설정](./docs/Part1-Basic/03-project.md) | CLAUDE.md, 메모리, 프로젝트 구조 설정 |
-| 04 | [컨텍스트 윈도우와 비용 최적화](./docs/Part1-Basic/04-context.md) | 토큰 관리, 세션 인수인계, 프롬프트 캐싱 |
-| 05 | [사용 원칙과 모범 사례](./docs/Part1-Basic/05-tips.md) | 프롬프트 작성법, 세션 관리, 모델 선택, 실수 회피 |
+| 01 | [설치와 기본 사용법](./docs/Part1-Basic/01-start.md) | 설치, 인증, 첫 실행, 프롬프트, 명령어, 단축키 |
+| 02 | [프로젝트 설정](./docs/Part1-Basic/02-project.md) | CLAUDE.md, 메모리, 프로젝트 구조 설정 |
+| 03 | [비용 최적화와 모범 사례](./docs/Part1-Basic/03-tips.md) | 컨텍스트 관리, 프롬프트 작성법, 비용 절감, 세션 인수인계 |
 
 ### Part 2: 실전 환경 구축
 
@@ -60,10 +59,9 @@ Claude-Code-Guide/
 
 | # | 제목 | 설명 |
 |:-:|------|------|
-| 01 | [고급 기능 — MCP, 스킬, 훅](./docs/Part2-Setup/01-advanced.md) | MCP 서버, 커스텀 슬래시 명령, 스킬, 훅 |
-| 02 | [상태 표시줄 커스터마이징](./docs/Part2-Setup/02-statusline.md) | Status Line 설정과 테마 |
+| 01 | [고급 기능 — MCP, 스킬, 훅](./docs/Part2-Setup/01-advanced.md) | MCP 서버, 스킬, 훅, Status Line |
+| 02 | [멀티 머신 병렬 작업](./docs/Part2-Setup/02-multisession.md) | Worktree + Hook + PR 조합으로 충돌 없는 병렬 작업 |
 | 03 | [tmux와 에이전트 팀](./docs/Part2-Setup/03-tmux.md) | 멀티 세션, 에이전트 병렬 실행 |
-| 04 | [멀티 머신 병렬 작업](./docs/Part2-Setup/04-multisession.md) | Worktree + Hook + PR 조합으로 충돌 없는 병렬 작업 |
 
 ### Part 3: 연구·학습 활용
 
@@ -74,6 +72,7 @@ Claude-Code-Guide/
 | 01 | [NotebookLM CLI 연동](./docs/Part3-Research/01-notebooklm.md) | nlm CLI로 노트북 자동화 |
 | 02 | [에이전트 팀 문헌 자동 수집](./docs/Part3-Research/02-research.md) | Agent Teams로 논문 수집 + PDF 다운로드 자동화 |
 | 03 | [LLM-Wiki — AI 지식 베이스 구축](./docs/Part3-Research/03-llm-wiki.md) | Karpathy's LLM-Wiki + Claude Code Hooks로 자가 진화형 메모리 |
+| 04 | [학술 논문 쓰기](./docs/Part3-Research/04-paper-writing.md) | LaTeX + CLAUDE.md로 미니 리뷰 논문 작성 실습 (스타터 킷 포함) |
 
 ### Part 4: 일상·생활 활용
 
@@ -81,9 +80,8 @@ Claude-Code-Guide/
 
 | # | 제목 | 설명 |
 |:-:|------|------|
-| 01 | [텔레그램 연동](./docs/Part4-Life/01-telegram.md) | Channels로 텔레그램에서 Claude 원격 제어 |
-| 02 | [MoAI-ADK](./docs/Part4-Life/02-moai.md) | AI 자율 개발 환경 소개 및 설치 준비 |
-| 03 | [k-skill — 한국 생활 스킬](./docs/Part4-Life/03-k-skill.md) | SRT 예매, 택배 조회, 미세먼지 등 25개+ 한국 생활 스킬 |
+| 01 | [대학원생의 Obsidian 볼트](./docs/Part4-Life/01-obsidian-vault.md) | PARA 구조, Dashboard, Gmail 뉴스레터 피드 파이프라인 |
+| 02 | [k-skill — 한국 생활 스킬](./docs/Part4-Life/02-k-skill.md) | SRT 예매, 택배 조회, 미세먼지 등 25개+ 한국 생활 스킬 |
 
 ---
 
