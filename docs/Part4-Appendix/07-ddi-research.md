@@ -219,7 +219,7 @@ nlm research start "쿼리 2" --notebook-id <id> --mode deep
 nlm research status <id>
 nlm research import <id> <task-id>
 nlm report create <id> --format "Create Your Own" \
-  --prompt "모든 소스에서 언급된 개별 논문을 마크다운 테이블로 나열해줘" \
+  --prompt "모든 소스에서 언급된 개별 논문을 아래 형식의 마크다운 테이블로 나열해줘: | Title | Authors | Year | Venue | DOI | arXiv ID | Status | Notes |" \
   --confirm
 ```
 
@@ -535,8 +535,8 @@ papers/
 
 ## 참고 자료
 
-- [tmux와 에이전트 팀](./03_Tmux_and_Agent_Teams.md) — Agent Teams 기본 사용법
-- [NotebookLM CLI 연동](./06_NotebookLM_CLI.md) — nlm CLI 설치 및 활용
+- [tmux와 에이전트 팀](../Part4-Appendix/06-tmux-full.md) — Agent Teams 기본 사용법
+- [NotebookLM CLI 연동](./01-notebooklm.md) — nlm CLI 설치 및 활용
 - [Semantic Scholar API 문서](https://api.semanticscholar.org/)
 - [PubMed E-utilities](https://www.ncbi.nlm.nih.gov/books/NBK25501/)
 - [Unpaywall API](https://unpaywall.org/products/api)

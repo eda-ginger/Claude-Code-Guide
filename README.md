@@ -32,11 +32,10 @@ Claude-Code-Guide/
 │       ├── session-pack/              # 세션 자동 정리
 │       └── nlm-skill/                 # NotebookLM CLI 가이드
 └── docs/
-    ├── Part1-Basic/                  # 기본 가이드 (읽고 이해)
-    ├── Part2-Setup/                  # 실전 환경 구축
-    ├── Part3-Research/               # 연구·학습 활용
-    ├── Part4-Life/                   # 일상·생활 활용
-    └── Part5-Appendix/              # 부록·레퍼런스
+    ├── Part1-Basic/                  # 기본 가이드 (이론 + 설정 + 실전)
+    ├── Part2-Research/               # 연구·학습 활용
+    ├── Part3-Life/                   # 일상·생활 활용
+    └── Part4-Appendix/              # 부록·레퍼런스
 ```
 
 ---
@@ -45,43 +44,50 @@ Claude-Code-Guide/
 
 ### Part 1: 기본 가이드
 
-> Claude Code의 개념과 사용법을 읽고 이해하는 문서
+> Claude Code의 개념과 사용법을 읽고 이해하는 이론 문서
 
 | # | 제목 | 설명 |
 |:-:|------|------|
-| 01 | [설치와 기본 사용법](./docs/Part1-Basic/01-start.md) | 설치, 인증, 첫 실행, 프롬프트, 명령어, 단축키 |
+| 01 | [AI 에이전트와 Claude Code](./docs/Part1-Basic/01-agent.md) | AI 에이전트 개념, Claude Code 설치, 인증, 첫 실행 |
 | 02 | [프로젝트 설정](./docs/Part1-Basic/02-project.md) | CLAUDE.md, 메모리, 프로젝트 구조 설정 |
-| 03 | [비용 최적화와 모범 사례](./docs/Part1-Basic/03-tips.md) | 컨텍스트 관리, 프롬프트 작성법, 비용 절감, 세션 인수인계 |
+| 03 | [세션 활용법](./docs/Part1-Basic/03-session.md) | 컨텍스트 관리, 비용 최적화, 세션 인수인계 |
 
-### Part 2: 실전 환경 구축
+### Part 2: 연구·학습 활용
 
-> Claude에게 문서를 보여주면 환경을 세팅하고 사용법까지 안내하는 문서
-
-| # | 제목 | 설명 |
-|:-:|------|------|
-| 01 | [고급 기능 — MCP, 스킬, 훅](./docs/Part2-Setup/01-advanced.md) | MCP 서버, 스킬, 훅, Status Line |
-| 02 | [멀티 머신 병렬 작업](./docs/Part2-Setup/02-multisession.md) | Worktree + Hook + PR 조합으로 충돌 없는 병렬 작업 |
-| 03 | [tmux와 에이전트 팀](./docs/Part2-Setup/03-tmux.md) | 멀티 세션, 에이전트 병렬 실행 |
-
-### Part 3: 연구·학습 활용
-
-> Claude Code를 연구 및 학습 워크플로에 활용하는 문서
+> Claude Code를 연구 및 학습 워크플로에 활용하는 실행 문서
 
 | # | 제목 | 설명 |
 |:-:|------|------|
-| 01 | [NotebookLM CLI 연동](./docs/Part3-Research/01-notebooklm.md) | nlm CLI로 노트북 자동화 |
-| 02 | [에이전트 팀 문헌 자동 수집](./docs/Part3-Research/02-research.md) | Agent Teams로 논문 수집 + PDF 다운로드 자동화 |
-| 03 | [LLM-Wiki — AI 지식 베이스 구축](./docs/Part3-Research/03-llm-wiki.md) | Karpathy's LLM-Wiki + Claude Code Hooks로 자가 진화형 메모리 |
-| 04 | [학술 논문 쓰기](./docs/Part3-Research/04-paper-writing.md) | LaTeX + CLAUDE.md로 미니 리뷰 논문 작성 실습 (스타터 킷 포함) |
+| 01 | [미니 리뷰 프로젝트 시작하기](./docs/Part2-Research/01-starter.md) | starter-kit 복사, 폴더 구조 설명, 실습 흐름 안내 |
+| 02 | [NotebookLM CLI 연동](./docs/Part2-Research/02-notebooklm.md) | nlm CLI 설치·인증·Skill 등록 |
+| 03 | [에이전트 팀 문헌 수집](./docs/Part2-Research/03-collection.md) | arXiv + DBLP + NLM으로 논문 5편 수집·선별 |
+| 04 | [LLM-Wiki — 논문 지식 베이스](./docs/Part2-Research/04-llm-wiki.md) | Karpathy 방식으로 비교표·아웃라인 생성 |
+| 05 | [학술 논문 쓰기](./docs/Part2-Research/05-paper-writing.md) | LaTeX 미니 리뷰 논문 작성 실습 |
 
-### Part 4: 일상·생활 활용
+### Part 3: 일상·생활 활용
 
-> Claude Code를 일상생활과 다양한 서비스에 활용하는 문서
+> Claude Code를 일상생활과 다양한 서비스에 활용하는 실행 문서
 
 | # | 제목 | 설명 |
 |:-:|------|------|
-| 01 | [대학원생의 Obsidian 볼트](./docs/Part4-Life/01-obsidian-vault.md) | PARA 구조, Dashboard, Gmail 뉴스레터 피드 파이프라인 |
-| 02 | [k-skill — 한국 생활 스킬](./docs/Part4-Life/02-k-skill.md) | SRT 예매, 택배 조회, 미세먼지 등 25개+ 한국 생활 스킬 |
+| 01 | [대학원생의 Obsidian 볼트](./docs/Part3-Life/01-obsidian-vault.md) | PARA 구조, Dashboard, Gmail 뉴스레터 피드 파이프라인 |
+| 02 | [k-skill — 한국 생활 스킬](./docs/Part3-Life/02-k-skill.md) | SRT 예매, 택배 조회, 미세먼지 등 25개+ 한국 생활 스킬 |
+
+### Part 4: 부록
+
+> 상세 레퍼런스, 보충 문서, 환경 설정 가이드
+
+| # | 제목 | 설명 |
+|:-:|------|------|
+| 01 | [상태 표시줄 설정](./docs/Part4-Appendix/01-statusline.md) | 커스텀 Status Line으로 비용·Git 상태 모니터링 |
+| 02 | [텔레그램 연동](./docs/Part4-Appendix/02-telegram.md) | Claude Code Channels로 텔레그램 원격 작업 |
+| 03 | [MoAI-ADK](./docs/Part4-Appendix/03-moai.md) | AI 자율 개발 환경 개요 |
+| 04 | [고급 기능 — MCP, 스킬, 훅](./docs/Part4-Appendix/04-advanced.md) | MCP 서버, 스킬, 훅 상세 레퍼런스 |
+| 05 | [Gmail 뉴스레터 피드](./docs/Part4-Appendix/04-gmail-feed.md) | Gmail MCP + Obsidian 뉴스레터 자동 요약 파이프라인 |
+| 06 | [멀티 머신 병렬 작업](./docs/Part4-Appendix/05-multisession.md) | Worktree + Hook + PR 조합으로 충돌 없는 병렬 작업 |
+| 07 | [tmux와 에이전트 팀](./docs/Part4-Appendix/06-tmux-full.md) | 멀티 세션, 에이전트 병렬 실행 환경 |
+| 08 | [DDI 논문 대규모 수집](./docs/Part4-Appendix/07-ddi-research.md) | 에이전트 5명 + Playwright로 331편 수집 실전 사례 |
+| 09 | [LLM-Wiki 상세 가이드](./docs/Part4-Appendix/08-llm-wiki-full.md) | Karpathy 아키텍처 + Hooks 자동화 + RAG 비교 |
 
 ---
 
@@ -123,14 +129,14 @@ claude
 
 ### 4. 가이드 따라하기
 
-Part 1을 읽고 기본을 익힌 후, Part 2의 문서를 Claude에게 보여주면서 환경을 구축해보세요.
+Part 1을 읽고 기본을 익힌 후, Part 2~3의 문서를 Claude에게 보여주면서 워크플로를 구축해보세요.
 
 ---
 
 ## 사전 요구사항
 
 - **Node.js** 18 이상
-- **Claude Code CLI** ([설치 가이드](./docs/Part1-Basic/01_Installation_and_Run.md))
+- **Claude Code CLI** ([설치 가이드](./docs/Part1-Basic/01-agent.md))
 - **Anthropic 구독** (Pro, Max, 또는 API 키)
 
 ---

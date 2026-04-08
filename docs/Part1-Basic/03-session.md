@@ -161,6 +161,20 @@ sudo apt install tmux
 echo 'set -g mouse on' >> ~/.tmux.conf
 ```
 
+### 에이전트 팀 활성화
+
+에이전트 팀(멀티 에이전트 병렬 작업)은 실험적 기능으로 기본 비활성화되어 있습니다. 프로젝트의 `.claude/settings.json`에 추가하세요:
+
+```json
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  }
+}
+```
+
+tmux 안에서 Claude Code를 실행하면, 에이전트 팀 생성 시 팀원별 분할 창이 자동 생성됩니다.
+
 **`cl` alias** — `~/.zshrc` 또는 `~/.bashrc`에 추가:
 
 ```bash
