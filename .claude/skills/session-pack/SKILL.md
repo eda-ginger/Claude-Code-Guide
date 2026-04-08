@@ -74,8 +74,9 @@ Glob: ~/.claude/**/*-context.md
 
 **Step 4: 기존 Handoff 확인**
 ```
-Glob: ~/.claude/handoff/HANDOFF-*.md
+Glob: ~/.claude/projects/{현재 프로젝트}/handoff/HANDOFF-*.md
 ```
+> 프로젝트 경로는 MEMORY.md와 같은 프로젝트 디렉토리 사용.
 결과를 `[EXISTING_HANDOFFS]` 변수에 저장.
 
 **Step 4b: Handoff 완료 여부 확인**
@@ -322,9 +323,14 @@ MEMORY.md 끝에 새 섹션을 append:
 
 ### Handoff Create
 
-`~/.claude/handoff/HANDOFF-{topic}-{YYYYMMDD}.md` 생성:
+`~/.claude/projects/{현재 프로젝트}/handoff/HANDOFF-{topic}-{YYYYMMDD}.md` 생성:
 
 > references/handoff-template.md의 템플릿을 사용
+
+**MEMORY.md 동기화**: `## Active Handoff` 섹션에 포인터 1줄 추가:
+```markdown
+- [HANDOFF-{topic}-{YYYYMMDD}.md](../handoff/HANDOFF-{topic}-{YYYYMMDD}.md) — {한줄 요약}
+```
 
 ### Handoff Update (기존 handoff 갱신)
 
@@ -333,12 +339,16 @@ MEMORY.md 끝에 새 섹션을 append:
 - 진행 중 상태 업데이트
 - frontmatter `updated:` 갱신
 
+**MEMORY.md 동기화**: Active Handoff의 해당 한줄 요약도 갱신 (최신 상태 반영).
+
 ### Handoff Archive
 
 완료된 Handoff를 archived/로 이동:
 ```bash
-mv ~/.claude/handoff/HANDOFF-{name}.md ~/.claude/handoff/archived/
+mv ~/.claude/projects/{현재 프로젝트}/handoff/HANDOFF-{name}.md ~/.claude/projects/{현재 프로젝트}/handoff/archived/
 ```
+
+**MEMORY.md 동기화**: `## Active Handoff` 섹션에서 해당 포인터 줄 제거.
 
 ---
 
@@ -374,4 +384,4 @@ mv ~/.claude/handoff/HANDOFF-{name}.md ~/.claude/handoff/archived/
 | 모순 발견 (Conflict) | Phase 4에서 별도 표시 + 사용자 선택 |
 | git repo 아님 | Phase 1 Step 1 skip, [GIT_CHANGES]를 "N/A"로 전달 |
 | 에이전트 실패 | 해당 카테고리만 skip, 나머지 정상 진행 |
-| Handoff 디렉토리 없음 | 자동 생성: `mkdir -p ~/.claude/handoff` |
+| Handoff 디렉토리 없음 | 자동 생성: `mkdir -p ~/.claude/projects/{현재 프로젝트}/handoff` |
