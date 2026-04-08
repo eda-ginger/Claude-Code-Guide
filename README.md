@@ -36,7 +36,7 @@ Claude-Code-Guide/
     ├── Part2-Setup/                  # 실전 환경 구축
     ├── Part3-Research/               # 연구·학습 활용
     ├── Part4-Life/                   # 일상·생활 활용
-    └── Part5-Reference/              # 부록·레퍼런스
+    └── Part5-Appendix/              # 부록·레퍼런스
 ```
 
 ---
