@@ -13,7 +13,7 @@
 | Claude Code | 논문 작성 실행 | `claude --version` |
 | 04에서 만든 산출물 | 비교표 + 아웃라인 | `ls secondary/paper_comparison.md secondary/outline.md` |
 
-> [LLM-Wiki 지식 베이스](./04-llm-wiki.md)를 먼저 완료하세요. `secondary/`에 비교표, 아웃라인, 논문 요약이 있어야 합니다.
+> [LLM-Wiki 지식 베이스](./04-llm-wiki.md)를 먼저 완료하세요. `secondary/`에 비교표, 아웃라인, 논문 요약이 있어야 합니다. [Obsidian](./05-obsidian.md)은 선택 — 위키를 시각적으로 확인하고 싶을 때 사용합니다.
 
 ---
 

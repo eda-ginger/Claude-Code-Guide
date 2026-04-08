@@ -79,7 +79,7 @@
 | C | NotebookLM (nlm CLI) | Google 검색 기반, 다른 엔진이 놓친 논문 발견 | 불필요 |
 
 > **규모가 크다면**: Semantic Scholar, PubMed, Google Scholar 에이전트를 추가할 수 있습니다.
-> 분야별 추천 구성은 [DDI 대규모 수집 사례](../Part4-Appendix/07-ddi-research.md)를 참고하세요.
+> 분야별 추천 구성은 DDI 대규모 수집 사례 (Part4-Appendix, 로컬 전용)를 참고하세요.
 
 ---
 
@@ -319,6 +319,6 @@ primary/
 
 ---
 
-> 💡 **Tip:** 대규모 수집이 필요하면 [DDI 대규모 수집 사례](../Part4-Appendix/07-ddi-research.md)를 참고하세요. 에이전트 5명 + Playwright 자동 다운로드로 331편을 수집한 실전 사례입니다.
+> 💡 **Tip:** 대규모 수집이 필요하면 DDI 대규모 수집 사례 (Part4-Appendix, 로컬 전용)를 참고하세요. 에이전트 5명 + Playwright 자동 다운로드로 331편을 수집한 실전 사례입니다.
 
 → **다음 단계**: 수집한 5편으로 지식 베이스를 구축합니다 — [LLM-Wiki](./04-llm-wiki.md)

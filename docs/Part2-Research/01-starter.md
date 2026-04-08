@@ -77,14 +77,15 @@ starter-kit에 포함된 `CLAUDE.md`에는 두 가지 규칙이 설정되어 있
 
 ## 4. 실습 흐름 미리보기
 
-이 프로젝트에서 02~05 문서를 순서대로 따라갑니다:
+이 프로젝트에서 02~06 문서를 순서대로 따라갑니다:
 
 | 단계 | 문서 | 하는 일 | 저장 위치 |
 |------|------|--------|----------|
 | 도구 설치 | [02-notebooklm](./02-notebooklm.md) | nlm CLI 설치·인증 | (도구 설치, 파일 없음) |
 | 논문 수집 | [03-collection](./03-collection.md) | 에이전트 팀으로 5편 수집 | `primary/papers/`, `primary/paper-list.md` |
 | 지식 정리 | [04-llm-wiki](./04-llm-wiki.md) | 위키 구축 + 비교표·아웃라인 생성 | `secondary/` 전체 |
-| 논문 작성 | [05-paper-writing](./05-paper-writing.md) | LaTeX 미니 리뷰 작성 | `work_paper/` |
+| 연구 관리 | [05-obsidian](./05-obsidian.md) | Obsidian 대시보드 + 그래프 시각화 | `secondary/dashboard.md` |
+| 논문 작성 | [06-paper-writing](./06-paper-writing.md) | LaTeX 미니 리뷰 작성 | `work_paper/` |
 
 ## 트러블슈팅
 

@@ -33,9 +33,8 @@ Claude-Code-Guide/
 │       └── nlm-skill/                 # NotebookLM CLI 가이드
 └── docs/
     ├── Part1-Basic/                  # 기본 가이드 (이론 + 설정 + 실전)
-    ├── Part2-Research/               # 연구·학습 활용
-    ├── Part3-Life/                   # 일상·생활 활용
-    └── Part4-Appendix/              # 부록·레퍼런스
+    ├── Part2-Research/               # 연구·학습 활용 (미니 리뷰 실습)
+    └── Part3-Life/                   # 일상·생활 활용
 ```
 
 ---
@@ -62,7 +61,8 @@ Claude-Code-Guide/
 | 02 | [NotebookLM CLI 연동](./docs/Part2-Research/02-notebooklm.md) | nlm CLI 설치·인증·Skill 등록 |
 | 03 | [에이전트 팀 문헌 수집](./docs/Part2-Research/03-collection.md) | arXiv + DBLP + NLM으로 논문 5편 수집·선별 |
 | 04 | [LLM-Wiki — 논문 지식 베이스](./docs/Part2-Research/04-llm-wiki.md) | Karpathy 방식으로 비교표·아웃라인 생성 |
-| 05 | [학술 논문 쓰기](./docs/Part2-Research/05-paper-writing.md) | LaTeX 미니 리뷰 논문 작성 실습 |
+| 05 | [Obsidian으로 연구 관리](./docs/Part2-Research/05-obsidian.md) | 대시보드·Graph View로 위키 시각화·추적 |
+| 06 | [학술 논문 쓰기](./docs/Part2-Research/06-paper-writing.md) | LaTeX 미니 리뷰 논문 작성 실습 |
 
 ### Part 3: 일상·생활 활용
 
@@ -70,24 +70,12 @@ Claude-Code-Guide/
 
 | # | 제목 | 설명 |
 |:-:|------|------|
-| 01 | [대학원생의 Obsidian 볼트](./docs/Part3-Life/01-obsidian-vault.md) | PARA 구조, Dashboard, Gmail 뉴스레터 피드 파이프라인 |
+| 01 | [Gmail 피드 + Obsidian 대시보드](./docs/Part3-Life/01-gmail-feed.md) | Gmail 뉴스레터 자동 수집, Obsidian 대시보드 구축 |
 | 02 | [k-skill — 한국 생활 스킬](./docs/Part3-Life/02-k-skill.md) | SRT 예매, 택배 조회, 미세먼지 등 25개+ 한국 생활 스킬 |
 
-### Part 4: 부록
+### Part 4: 부록 (로컬 전용)
 
-> 상세 레퍼런스, 보충 문서, 환경 설정 가이드
-
-| # | 제목 | 설명 |
-|:-:|------|------|
-| 01 | [상태 표시줄 설정](./docs/Part4-Appendix/01-statusline.md) | 커스텀 Status Line으로 비용·Git 상태 모니터링 |
-| 02 | [텔레그램 연동](./docs/Part4-Appendix/02-telegram.md) | Claude Code Channels로 텔레그램 원격 작업 |
-| 03 | [MoAI-ADK](./docs/Part4-Appendix/03-moai.md) | AI 자율 개발 환경 개요 |
-| 04 | [고급 기능 — MCP, 스킬, 훅](./docs/Part4-Appendix/04-advanced.md) | MCP 서버, 스킬, 훅 상세 레퍼런스 |
-| 05 | [Gmail 뉴스레터 피드](./docs/Part4-Appendix/04-gmail-feed.md) | Gmail MCP + Obsidian 뉴스레터 자동 요약 파이프라인 |
-| 06 | [멀티 머신 병렬 작업](./docs/Part4-Appendix/05-multisession.md) | Worktree + Hook + PR 조합으로 충돌 없는 병렬 작업 |
-| 07 | [tmux와 에이전트 팀](./docs/Part4-Appendix/06-tmux-full.md) | 멀티 세션, 에이전트 병렬 실행 환경 |
-| 08 | [DDI 논문 대규모 수집](./docs/Part4-Appendix/07-ddi-research.md) | 에이전트 5명 + Playwright로 331편 수집 실전 사례 |
-| 09 | [LLM-Wiki 상세 가이드](./docs/Part4-Appendix/08-llm-wiki-full.md) | Karpathy 아키텍처 + Hooks 자동화 + RAG 비교 |
+> 상세 레퍼런스, 보충 문서. git에 포함되지 않으며 로컬에서만 관리됩니다.
 
 ---
 
