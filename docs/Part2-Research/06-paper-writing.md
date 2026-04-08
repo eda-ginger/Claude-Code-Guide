@@ -15,7 +15,6 @@
 
 > [LLM-Wiki 지식 베이스](./04-llm-wiki.md)를 먼저 완료하세요. `secondary/`에 비교표, 아웃라인, 논문 요약이 있어야 합니다. [Obsidian](./05-obsidian.md)은 선택 — 위키를 시각적으로 확인하고 싶을 때 사용합니다.
 
----
 
 ## 1. LaTeX 환경 설치
 
@@ -50,7 +49,6 @@ VS Code에서 `Ctrl+Shift+X` → "LaTeX Workshop" 검색 → 설치.
 
 > Antigravity 에디터도 동일한 확장을 사용할 수 있습니다.
 
----
 
 ## 2. 원고 작성
 
@@ -138,7 +136,6 @@ pdflatex main.tex
 | `Citation undefined` | `.bib`에 키가 없음 | "references.bib에 빠진 엔트리 추가해줘" |
 | `Missing $ inserted` | 수식 밖에서 `_` 사용 | "수식 기호 이스케이프 처리해줘" |
 
----
 
 ## 3. 검증
 
@@ -172,7 +169,6 @@ references.bib의 모든 엔트리가 main.tex에서 인용되고 있는지,
 warning이 있으면 알려줘.
 ```
 
----
 
 ## 실전 팁
 
@@ -198,7 +194,6 @@ warning이 있으면 알려줘.
 | 30~100편 | 에이전트 팀으로 논문 분석 병렬화 ([에이전트 팀 문헌 수집](./03-collection.md) 참고) |
 | 100편+ | 큐레이션 파이프라인 (에이전트 검증 → 사용자 선별), Supplementary Table 분리 |
 
----
 
 ## 체크리스트
 
@@ -208,7 +203,6 @@ warning이 있으면 알려줘.
 - [ ] 컴파일이 warning 없이 완료되는가?
 - [ ] PDF에서 참고문헌 목록이 정상 출력되는가?
 
----
 
 ## 트러블슈팅
 

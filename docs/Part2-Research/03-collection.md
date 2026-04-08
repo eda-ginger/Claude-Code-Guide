@@ -16,7 +16,6 @@
 
 > 모든 API는 키 없이 사용 가능합니다. nlm 설치가 안 되어 있다면 [NotebookLM CLI 연동](./02-notebooklm.md)을 먼저 진행하세요.
 
----
 
 ## 1. 수집 기준 정의
 
@@ -60,7 +59,6 @@
 - "LLM-based code generation benchmarks and evaluation methods 2021-2026"
 ```
 
----
 
 ## 2. 에이전트 팀 구성
 
@@ -81,7 +79,6 @@
 > **규모가 크다면**: Semantic Scholar, PubMed, Google Scholar 에이전트를 추가할 수 있습니다.
 > 분야별 추천 구성은 DDI 대규모 수집 사례 (Part4-Appendix, 로컬 전용)를 참고하세요.
 
----
 
 ## 3. 수집 실행
 
@@ -216,7 +213,6 @@ Teammate C ──"NLM 완료: 10편"──►
 | AlphaCode | Li et al. | 2022 | Science | 10.1126/... | 2203.07814 | 800+ | 경쟁 프로그래밍 |
 ```
 
----
 
 ## 4. 병합 및 5편 선별
 
@@ -275,7 +271,6 @@ Teammate C ──"NLM 완료: 10편"──►
 
 최종 리스트를 `primary/paper-list.md`에 저장합니다. 이 파일이 이후 지식 베이스 구축과 논문 작성의 입력물이 됩니다.
 
----
 
 ## 5. PDF 확보
 
@@ -305,7 +300,6 @@ primary/
 
 > PDF는 git에 올리지 않습니다. `.gitignore`에 `primary/papers/*.pdf`를 추가하세요.
 
----
 
 ## 트러블슈팅
 

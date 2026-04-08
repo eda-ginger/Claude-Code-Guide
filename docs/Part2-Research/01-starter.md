@@ -36,8 +36,8 @@ my-mini-review/
 │   ├── paper_comparison.md      # → 04에서 생성 (비교표 SSOT)
 │   └── outline.md               # → 04에서 생성 (논문 아웃라인)
 └── work_paper/                  # LaTeX 집필 공간
-    ├── main.tex                 # → 05에서 사용 (원고)
-    └── references.bib           # → 05에서 사용 (참고문헌)
+    ├── main.tex                 # → 06에서 사용 (원고)
+    └── references.bib           # → 06에서 사용 (참고문헌)
 ```
 
 | 폴더 | 역할 | 누가 수정? | 비유 |
