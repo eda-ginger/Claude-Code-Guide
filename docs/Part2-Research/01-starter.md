@@ -10,7 +10,81 @@
 |------|------|-----------|
 | Claude Code | 프로젝트 실행 환경 | `claude --version` |
 
-## 1. starter-kit 복사
+## 1. 선택 설치
+
+필수는 아니지만 설치하면 실습이 편리합니다. 아래 명령을 순서대로 실행하세요.
+
+### 상태 표시줄 (Status Line)
+
+Claude Code 하단에 컨텍스트 사용량, 비용 등을 실시간 표시합니다.
+
+```
+> /statusline 모델 이름과 컨텍스트 사용률을 프로그레스 바로 보여줘
+```
+
+### tmux — 세션 유지 환경
+
+터미널을 닫아도 세션이 백그라운드에서 유지됩니다.
+
+```bash
+# tmux 설치 여부 확인
+which tmux || echo "tmux 미설치"
+
+# 미설치 시 설치 (OS에 맞게 선택)
+# macOS:  brew install tmux
+# Ubuntu/WSL:  sudo apt install tmux
+
+# 마우스 스크롤 활성화 (.tmux.conf에 없으면 추가)
+grep -q 'set -g mouse on' ~/.tmux.conf 2>/dev/null || echo 'set -g mouse on' >> ~/.tmux.conf
+```
+
+### 에이전트 팀 활성화
+
+`.claude/settings.json`에 환경변수를 추가합니다. 이미 있으면 건너뜁니다.
+
+```bash
+# settings.json이 없으면 생성
+mkdir -p .claude
+[ -f .claude/settings.json ] || echo '{}' > .claude/settings.json
+```
+
+아래 내용이 `.claude/settings.json`에 포함되어야 합니다:
+
+```json
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  }
+}
+```
+
+### `cl` alias — tmux + Claude Code 한 번에 시작
+
+`~/.bashrc` (또는 `~/.zshrc`)에 아래 함수가 없으면 추가합니다:
+
+```bash
+# cl alias 존재 여부 확인
+type cl 2>/dev/null || cat >> ~/.bashrc << 'EOF'
+cl() {
+  local sess="cl-$(basename "$PWD" | tr -cd 'a-zA-Z0-9_-')"
+  if [ -z "$TMUX" ]; then
+    tmux has-session -t "$sess" 2>/dev/null || tmux new-session -d -s "$sess" -c "$PWD" "claude"
+    tmux attach -t "$sess"
+  else
+    claude
+  fi
+}
+EOF
+source ~/.bashrc
+```
+
+| 명령어 | 기능 |
+|--------|------|
+| `cl` | Claude Code 시작 (또는 돌아오기) |
+| `Ctrl+b` → `d` | 세션에서 나가기 (백그라운드 유지) |
+| `exit` | 완전 종료 |
+
+## 2. starter-kit 복사
 
 이 저장소에 포함된 starter-kit을 작업 디렉토리로 복사합니다:
 
@@ -19,7 +93,7 @@ cp -r docs/Part2-Research/starter-kit ~/my-mini-review
 cd ~/my-mini-review
 ```
 
-## 2. 폴더 구조 이해하기
+## 3. 폴더 구조 이해하기
 
 ```
 my-mini-review/
@@ -52,7 +126,7 @@ my-mini-review/
 - **SSOT(Single Source of Truth)**: 비교표가 `secondary/`에 하나만 있으면, 본문과 불일치가 생겼을 때 어디가 맞는지 명확합니다.
 - **작업 공간 분리**: `.tex` 파일만 자유롭게 편집. 원본 자료와 섞이지 않습니다.
 
-## 3. CLAUDE.md 확인
+## 4. CLAUDE.md 확인
 
 starter-kit에 포함된 `CLAUDE.md`에는 두 가지 규칙이 설정되어 있습니다:
 
@@ -75,7 +149,7 @@ starter-kit에 포함된 `CLAUDE.md`에는 두 가지 규칙이 설정되어 있
 
 > 규칙을 자기 프로젝트에 맞게 수정하려면 `CLAUDE.md`를 직접 편집하세요.
 
-## 4. 실습 흐름 미리보기
+## 5. 실습 흐름 미리보기
 
 이 프로젝트에서 02~06 문서를 순서대로 따라갑니다:
 

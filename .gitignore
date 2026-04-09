@@ -7,5 +7,13 @@
 # 대용량 미디어 파일
 *.mp3
 
+# 텔레그램 관련 스킬
+.claude/skills/claudeclaw/
+
 # 부록 (로컬에만 보관)
 docs/Part4-Appendix/
+
+# 세미나 — 템플릿·생성물은 git 제외
+docs/Part3-Life/seminar/[PPTPLUG]*/
+docs/Part3-Life/seminar/*.pdf
+docs/Part3-Life/seminar/*.pptx
