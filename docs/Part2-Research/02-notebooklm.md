@@ -161,13 +161,30 @@ nlm report create <notebook-id> --format "Briefing Doc" --confirm
 
 > 질의 결과는 NotebookLM 웹 UI 채팅에도 자동으로 기록됩니다.
 
-### 예시 3: 딥 리서치 → PDF 보고서
+### 예시 3: 리서치 → PDF 보고서
+
+리서치 모드는 두 가지입니다:
+
+| 모드 | 소요 시간 | 소스 수 | 용도 |
+|------|-----------|---------|------|
+| **fast** (기본) | ~30초 | ~10개 | 빠른 조사, 실습용 |
+| **deep** | ~5분 | ~40개 | 깊은 조사, 본격 연구용 |
 
 ```bash
-nlm research start <notebook-id> "enterprise AI ROI metrics 2026"
-nlm source list <notebook-id>
+# fast 모드 (기본값, 실습에서는 이걸 사용)
+nlm research start "enterprise AI ROI metrics 2026" -n <notebook-id>
+
+# deep 모드 (시간 여유가 있을 때)
+nlm research start "enterprise AI ROI metrics 2026" -n <notebook-id> --mode deep
+
+# 진행 상황 확인
+nlm research status
+
+# 발견된 소스를 노트북에 추가
+nlm research import <notebook-id>
+
+# 보고서 생성
 nlm report create <notebook-id> --format "Briefing Doc" --confirm
-nlm download report <notebook-id> <artifact-id>
 ```
 
 ### Claude Code에서 자연어로 사용
@@ -179,7 +196,7 @@ Skill이 설치되어 있으면 자연어로 요청할 수 있습니다.
 | `nlm으로 내 노트북 목록을 보여줘` | `nlm notebook list` 실행 후 목록 출력 |
 | `"클라우드 아키텍처" 노트북을 만들고 이 URL들을 소스로 추가해줘` | 노트북 생성 → 소스 추가 순차 실행 |
 | `이 YouTube 영상들로 오디오 브리핑을 만들어줘` | 소스 추가 → `nlm audio create` 실행 |
-| `"AI 트렌드"에 대해 딥 리서치를 실행하고 브리핑 문서를 생성해줘` | `nlm research start` → `nlm report create` 실행 |
+| `"AI 트렌드"에 대해 리서치를 실행하고 브리핑 문서를 생성해줘` | `nlm research start` (fast) → `nlm report create` 실행 |
 
 > NotebookLM은 소스에 없는 내용은 생성하지 않으므로 할루시네이션 없이 신뢰할 수 있는 결과를 얻을 수 있습니다.
 

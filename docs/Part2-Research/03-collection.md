@@ -156,9 +156,8 @@ tmux 안에서 Claude Code가 실행된 상태에서, 아래 프롬프트를 전
 # 노트북 생성
 nlm notebook create "LLM Code Generation Papers"
 
-# Deep Research 실행 (쿼리별)
-nlm research start <id> "LLM-based code generation benchmarks"
-nlm research start <id> "Codex AlphaCode CodeLlama comparison"
+# 리서치 실행 (fast 모드 — 실습용, 각 ~30초)
+nlm research start "LLM code generation survey 2024 2025" -n <id>
 
 # 결과 리포트 생성
 nlm report create <id> --format "Create Your Own" \
