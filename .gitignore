@@ -13,7 +13,13 @@
 # 부록 (로컬에만 보관)
 docs/Part4-Appendix/
 
-# 세미나 — 템플릿·생성물은 git 제외
+# 세미나 — 템플릿·생성물·뉴스 슬라이드는 git 제외
 docs/Part3-Life/seminar/[PPTPLUG]*/
 docs/Part3-Life/seminar/*.pdf
 docs/Part3-Life/seminar/*.pptx
+docs/Part3-Life/seminar/news-slides.md
+docs/Part3-Life/seminar/Fig/anthropic-logo.png
+docs/Part3-Life/seminar/Fig/electric.png
+docs/Part3-Life/seminar/Fig/k-skill-thumbnail.png
+docs/Part3-Life/seminar/Fig/google-cloud.png
+docs/Part3-Life/seminar/Fig/running-club.jpg
