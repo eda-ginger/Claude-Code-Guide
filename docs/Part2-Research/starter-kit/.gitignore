@@ -6,3 +6,5 @@ work_paper/*.blg
 work_paper/*.log
 work_paper/*.out
 work_paper/*.pdf
+!work_paper/template/oup-authoring-template.pdf
+.obsidian/

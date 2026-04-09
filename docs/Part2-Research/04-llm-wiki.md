@@ -80,11 +80,14 @@ LLM-Based Code Generation 논문 3편의 지식 베이스를 구축하고,
 ## 위키 페이지 규칙
 - 각 페이지 상단에 YAML Frontmatter:
   ```yaml
-  title: 페이지 제목
-  sources: [참조한 primary/ 파일들]
-  related: [[연결된 개념 페이지들]]
-  last_compiled: 날짜
+  title: "페이지 제목"
+  sources:
+    - "primary/papers/01_Codex_2021.pdf"
+  related:
+    - "[[연결된_개념_페이지]]"
+  last_compiled: 2026-04-09
   ```
+- `[[`, `()`, `,` 등 특수문자가 포함된 값은 반드시 따옴표로 감싸야 Dataview 호환
 - 논문 간 연결은 [[wiki-links]] 사용
 - 모든 주장에 원본 논문 출처 명시
 

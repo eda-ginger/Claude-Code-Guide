@@ -52,7 +52,19 @@ VS Code에서 `Ctrl+Shift+X` → "LaTeX Workshop" 검색 → 설치.
 
 ## 2. 원고 작성
 
-`starter-kit/work_paper/`에서 작업합니다. starter-kit에 `main.tex`와 `references.bib` 템플릿이 포함되어 있습니다.
+`starter-kit/work_paper/`에서 작업합니다. 예제 템플릿(`oup-authoring-template.tex`)이 포함되어 있습니다.
+
+### 템플릿 복사
+
+원본 템플릿을 보존하기 위해 `template/`에서 복사하여 작업합니다:
+
+```bash
+cp work_paper/template/oup-authoring-template.tex work_paper/main.tex
+cp work_paper/template/oup-authoring-template.cls work_paper/
+cp work_paper/template/oup-abbrvnat.bst work_paper/
+```
+
+이후 모든 작업은 `work_paper/main.tex`에서 진행합니다. `template/` 폴더의 원본은 참고용으로 보존됩니다.
 
 ### 아웃라인 기반 초안 작성
 

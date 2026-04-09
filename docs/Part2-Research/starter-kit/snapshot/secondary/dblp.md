@@ -1,0 +1,44 @@
+# DBLP 검색 결과
+
+검색일: 2026-04-09
+쿼리: LLM code generation / code completion large language model / program synthesis benchmark HumanEval / code generation neural
+
+| Title | Authors | Year | Venue | DOI | arXiv ID | Citations (추정) | Notes |
+|-------|---------|------|-------|-----|----------|-----------------|-------|
+| Evaluating Large Language Models Trained on Code | Mark Chen, Jerry Tworek, Heewoo Jun et al. (OpenAI) | 2021 | CoRR | - | 2107.03374 | ~10000+ | HumanEval 벤치마크 도입, Codex 모델 제안; 코드 생성 LLM 연구의 출발점 |
+| CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for Code Understanding and Generation | Yue Wang, Weishi Wang, Shafiq R. Joty, Steven C. H. Hoi | 2021 | EMNLP | 10.18653/V1/2021.EMNLP-MAIN.685 | 2109.00859 | ~3000+ | 식별자 인식 pre-training; 코드 이해+생성 통합 모델 |
+| MultiPL-E: A Scalable and Polyglot Approach to Benchmarking Neural Code Generation | Federico Cassano, John Gouwar, Daniel Nguyen et al. | 2023 | IEEE Trans. Softw. Eng. | 10.1109/TSE.2023.3267446 | - | ~500+ | HumanEval을 18개 언어로 확장; 다국어 코드 생성 벤치마크 |
+| CodeGeeX: A Pre-Trained Model for Code Generation with Multilingual Benchmarking on HumanEval-X | Qinkai Zheng, Xiao Xia, Xu Zou, Yuxiao Dong et al. | 2023 | KDD | 10.1145/3580305.3599790 | 2303.17568 | ~500+ | 130억 파라미터 다국어 코드 LLM; HumanEval-X 벤치마크 신규 제안 |
+| StarCoder: may the source be with you! | Raymond Li, Loubna Ben Allal, Yangtian Zi, Niklas Muennighoff et al. | 2023 | Trans. Mach. Learn. Res. | - | 2305.06161 | ~2000+ | 오픈소스 15.5B 코드 LLM; The Stack 데이터셋 기반; HumanEval·MBPP 평가 |
+| CodeBERTScore: Evaluating Code Generation with Pretrained Models of Code | Shuyan Zhou, Uri Alon, Sumit Agarwal, Graham Neubig | 2023 | EMNLP | 10.18653/V1/2023.EMNLP-MAIN.859 | 2302.05527 | ~200+ | 코드 생성 품질 평가 지표 CodeBERTScore 제안; 기존 BLEU 대체 |
+| Competition-Level Code Generation with AlphaCode | Yujia Li, David H. Choi, Junyoung Chung, Nate Kushman et al. (DeepMind) | 2022 | CoRR | - | 2203.07814 | ~2000+ | 경쟁 프로그래밍 수준 코드 생성; Codeforces 상위 50% 달성 |
+| Compilable Neural Code Generation with Compiler Feedback | Xin Wang, Yasheng Wang, Yao Wan et al. | 2022 | ACL | 10.18653/V1/2022.FINDINGS-ACL.2 | 2203.05132 | ~200+ | 컴파일러 피드백을 학습에 통합; 컴파일 가능한 코드 생성률 향상 |
+| A Static Evaluation of Code Completion by Large Language Models | Hantian Ding, Varun Kumar, Yuchen Tian et al. | 2023 | ACL (Industry) | 10.18653/V1/2023.ACL-INDUSTRY.34 | - | ~200+ | LLM 코드 완성 정적 평가 프레임워크; 산업 현장 적용 분석 |
+| CodeScope: An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs | Weixiang Yan, Haitian Liu, Yunkun Wang et al. | 2024 | ACL | 10.18653/V1/2024.ACL-LONG.301 | 2311.08588 | ~100+ | 실행 기반 다국어·다과제 벤치마크; 코드 생성 외 디버깅·번역 포함 |
+| HumanEval Pro and MBPP Pro: Evaluating Large Language Models on Self-invoking Code Generation Task | Zhaojian Yu, Yilun Zhao, Arman Cohan, Xiaoping Zhang | 2025 | ACL | - | 2412.21199 | ~50+ | HumanEval/MBPP 확장판; 함수 자기호출 코드 생성 평가 |
+| HumanEvalComm: Benchmarking the Communication Competence of Code Generation for LLMs and LLM Agents | Jie JW Wu, Fatemeh H. Fard | 2025 | ACM Trans. Softw. Eng. Methodol. | 10.1145/3715109 | 2406.00215 | ~30+ | 코드 생성 시 명세 불명확 시 의사소통 역량 평가 |
+| HumanEval-XL: A Multilingual Code Generation Benchmark for Cross-lingual Natural Language Generalization | Qiwei Peng, Yekun Chai, Xuhong Li | 2024 | LREC/COLING | - | 2402.16694 | ~50+ | 23개 언어 HumanEval 확장; 자연어→코드 교차 언어 일반화 평가 |
+| CodeLutra: Boosting LLM Code Generation via Preference-Guided Refinement | Leitian Tao, Xiang Chen, Tong Yu et al. | 2025 | Trans. Mach. Learn. Res. | - | 2411.05199 | ~30+ | 선호도 기반 정제(preference-guided refinement)로 코드 생성 향상 |
+| DebateCoder: Towards Collective Intelligence of LLMs via Test Case Driven LLM Debate for Code Generation | Jizheng Chen, Kounianhua Du, Xinyi Dai et al. | 2025 | ACL | - | - | ~20+ | 테스트 케이스 기반 LLM 토론으로 집단지성 코드 생성 |
+| CodeArena: A Collective Evaluation Platform for LLM Code Generation | Mingzhe Du, Anh Tuan Luu, Bin Ji et al. | 2025 | ACL (Demo) | 10.18653/V1/2025.ACL-DEMO.48 | 2503.01295 | ~10+ | LLM 코드 생성 집합적 평가 플랫폼 |
+| CodeElo: Benchmarking Competition-level Code Generation of LLMs with Human-comparable Elo Ratings | Shanghaoran Quan, Jiaxi Yang, Bowen Yu et al. | 2025 | CoRR | 10.48550/ARXIV.2501.01257 | 2501.01257 | ~30+ | Elo 레이팅 기반 경쟁 프로그래밍 코드 생성 벤치마크 |
+| Teaching Code LLMs to Use Autocompletion Tools in Repository-Level Code Generation | Chong Wang, Jian Zhang, Yebo Feng et al. | 2025 | ACM Trans. Softw. Eng. Methodol. | 10.1145/3714462 | 2401.06391 | ~50+ | 리포지토리 수준 코드 생성에 자동완성 도구 활용 학습 |
+| Chain-of-Thought in Neural Code Generation: From and for Lightweight Language Models | Guang Yang, Yu Zhou, Xiang Chen et al. | 2024 | IEEE Trans. Softw. Eng. | 10.1109/TSE.2024.3440503 | 2312.05562 | ~80+ | 경량 LLM 대상 CoT 프롬프팅으로 코드 생성 성능 향상 |
+| Functional Overlap Reranking for Neural Code Generation | Hung To, Minh Nguyen, Nghi Bui | 2024 | ACL | 10.18653/V1/2024.FINDINGS-ACL.220 | - | ~30+ | 기능 중복 기반 후보 재순위화(reranking)로 코드 생성 정확도 향상 |
+| The Good, the Bad, and the Missing: Neural Code Generation for Machine Learning Tasks | Jiho Shin, Moshi Wei, Junjie Wang, Lin Shi, Song Wang | 2024 | ACM Trans. Softw. Eng. Methodol. | 10.1145/3630009 | 2305.09082 | ~50+ | ML 태스크 특화 코드 생성 분석; 성공·실패 패턴 분류 |
+| How Important Are Good Method Names in Neural Code Generation? A Model Robustness Perspective | Guang Yang, Yu Zhou, Wenhua Yang et al. | 2024 | ACM Trans. Softw. Eng. Methodol. | 10.1145/3630010 | 2211.15844 | ~60+ | 메서드명 품질이 코드 생성 모델 견고성에 미치는 영향 분석 |
+| R2C2-Coder: Enhancing and Benchmarking Real-world Repository-level Code Completion | Ken Deng, Jiaheng Liu, He Zhu et al. | 2024 | CoRR | 10.48550/ARXIV.2406.01359 | 2406.01359 | ~30+ | 실제 리포지토리 수준 코드 완성 벤치마크 및 모델 제안 |
+| aiXcoder-7B: A Lightweight and Effective Large Language Model for Code Completion | Siyuan Jiang, Jia Li, He Zong et al. | 2024 | CoRR | 10.48550/ARXIV.2410.13187 | 2410.13187 | ~20+ | 7B 경량 코드 완성 LLM; 실용성과 성능 균형 |
+| Retrieval-augmented code completion for local projects using large language models | Marko Hostnik, Marko Robnik-Sikonja | 2025 | Expert Syst. Appl. | 10.1016/J.ESWA.2025.128596 | - | ~20+ | RAG 기반 로컬 프로젝트 코드 완성; 프로젝트 맥락 활용 |
+| Large language models for code completion: A systematic literature review | Rasha Ahmad Husein, Hala Aburajouh, Cagatay Catal | 2025 | Comput. Stand. Interfaces | 10.1016/J.CSI.2024.103917 | - | ~30+ | [Survey] LLM 코드 완성 연구 체계적 문헌 검토 |
+| Embedding API dependency graph for neural code generation | Chen Lyu, Ruyun Wang, Hongyu Zhang et al. | 2021 | Empir. Softw. Eng. | 10.1007/S10664-021-09968-2 | 2103.15361 | ~100+ | API 의존성 그래프 임베딩으로 코드 생성 정확도 향상 |
+| Test-Driven Multi-Task Learning with Functionally Equivalent Code Transformation for Neural Code Generation | Xin Wang, Xiao Liu, Pingyi Zhou et al. | 2022 | ASE | 10.1145/3551349.3559549 | - | ~80+ | 테스트 기반 멀티태스크 학습과 기능 동치 변환 적용 |
+| Improving domain-specific neural code generation with few-shot meta-learning | Zhen Yang, Jacky Wai Keung, Zeyu Sun et al. | 2024 | Inf. Softw. Technol. | 10.1016/J.INFSOF.2023.107365 | - | ~50+ | 도메인 특화 코드 생성을 위한 few-shot 메타러닝 |
+| Uncovering Weaknesses in Neural Code Generation | Xiaoli Lian, Shuaisong Wang, Jieping Ma et al. | 2024 | CoRR | 10.48550/ARXIV.2407.09793 | 2407.09793 | ~20+ | 코드 생성 모델의 약점 분석; 오류 유형 분류 |
+| Guided Code Generation with LLMs: A Multi-Agent Framework for Complex Code Tasks | Amr Almorsi, Mohanned Ahmed, Walid Gomaa | 2025 | CoRR | 10.48550/ARXIV.2501.06625 | 2501.06625 | ~10+ | 복잡한 코드 태스크를 위한 멀티에이전트 LLM 프레임워크 |
+| CodeCoR: An LLM-Based Self-Reflective Multi-Agent Framework for Code Generation | Ruwei Pan, Hongyu Zhang, Chao Liu | 2025 | CoRR | 10.48550/ARXIV.2501.07811 | 2501.07811 | ~10+ | 자기반성(self-reflection) 기반 멀티에이전트 코드 생성 |
+| Enhancing Code LLMs with Reinforcement Learning in Code Generation: A Survey | Junqiao Wang, Zeng Zhang, Yangfan He et al. | 2024 | CoRR | 10.48550/ARXIV.2412.20367 | 2412.20367 | ~20+ | [Survey] 강화학습 기반 코드 생성 LLM 개선 연구 조사 |
+| Code LLMs Still Fall Short of Top Programmers: Evaluating Algorithmic Code Generation Through Computational Thinking | Shisong Chen, Ziyu Zhou, Yicong Zhao et al. | 2026 | WSDM | 10.1145/3773966.3778008 | - | ~10+ | 알고리즘 코드 생성의 계산적 사고 평가; 최상위 프로그래머 대비 분석 |
+| SE Perspective on LLMs: Biases in Code Generation, Code Interpretability, and Code Security Risks | Rrezarta Krasniqi, Depeng Xu, Marco Vieira | 2026 | ACM Comput. Surv. | 10.1145/3774324 | - | ~10+ | [Survey] SE 관점 LLM 코드 생성 편향·해석성·보안 리스크 분석 |
+| CONCUR: Benchmarking LLMs for Concurrent Code Generation | Jue Huang, Tarek Mahmud, Corina S. Pasareanu, Guowei Yang | 2026 | CoRR | 10.48550/ARXIV.2603.03683 | 2603.03683 | - | 동시성(concurrent) 코드 생성 LLM 벤치마크 신규 제안 |
+| RKE-Coder: A LLMs-Based Code Generation Framework with Algorithmic and Code Knowledge Integration | Yajiao Deng, Zhijie Zhang, Qi Huang, Mingwen Wang | 2025 | NLPCC | 10.1007/978-981-95-3343-5_41 | - | - | 알고리즘·코드 지식 통합 LLM 코드 생성 프레임워크 |

@@ -9,6 +9,17 @@
 | 도구 | 용도 | 확인 방법 |
 |------|------|-----------|
 | Claude Code | 프로젝트 실행 환경 | `claude --version` |
+| poppler-utils | PDF 논문 읽기 (04에서 필요) | `pdftotext -v` |
+
+poppler-utils가 없으면 설치하세요:
+
+```bash
+# Ubuntu/WSL
+sudo apt install -y poppler-utils
+
+# macOS
+brew install poppler
+```
 
 ## 1. 선택 설치
 
