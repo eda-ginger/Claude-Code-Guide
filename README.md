@@ -58,7 +58,7 @@ claude
 |:-:|------|------|
 | 01 | [미니 리뷰 프로젝트 시작하기](./docs/Part2-Research/01-starter.md) | 선택 설치, starter-kit 복사, 폴더 구조, 실습 흐름 |
 | 02 | [NotebookLM CLI 연동](./docs/Part2-Research/02-notebooklm.md) | nlm CLI 설치·인증·Skill 등록 |
-| 03 | [에이전트 팀 문헌 수집](./docs/Part2-Research/03-collection.md) | arXiv + DBLP + NLM으로 논문 5편 수집·선별 |
+| 03 | [에이전트 팀 문헌 수집](./docs/Part2-Research/03-collection.md) | arXiv + DBLP 에이전트 팀으로 논문 3편 수집·선별 |
 | 04 | [LLM-Wiki — 논문 지식 베이스](./docs/Part2-Research/04-llm-wiki.md) | Karpathy 방식으로 비교표·아웃라인 생성 |
 | 05 | [Obsidian으로 연구 관리](./docs/Part2-Research/05-obsidian.md) | 대시보드·Graph View로 위키 시각화·추적 |
 | 06 | [학술 논문 쓰기](./docs/Part2-Research/06-paper-writing.md) | LaTeX 미니 리뷰 논문 작성 실습 |
