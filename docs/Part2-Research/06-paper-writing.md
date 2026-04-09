@@ -2,7 +2,7 @@
 
 > 이 문서를 Claude에게 보여주면 04에서 만든 비교표와 아웃라인을 바탕으로 LaTeX 미니 리뷰 논문을 작성해줍니다.
 >
-> **예제 주제**: LLM-Based Code Generation 미니 리뷰 (5편 논문 비교)
+> **예제 주제**: LLM-Based Code Generation 미니 리뷰 (3편 논문 비교)
 
 ---
 
@@ -52,7 +52,7 @@ VS Code에서 `Ctrl+Shift+X` → "LaTeX Workshop" 검색 → 설치.
 
 ## 2. 원고 작성
 
-`my-mini-review/work_paper/`에서 작업합니다. starter-kit에 `main.tex`와 `references.bib` 템플릿이 포함되어 있습니다.
+`starter-kit/work_paper/`에서 작업합니다. starter-kit에 `main.tex`와 `references.bib` 템플릿이 포함되어 있습니다.
 
 ### 아웃라인 기반 초안 작성
 
@@ -60,7 +60,7 @@ VS Code에서 `Ctrl+Shift+X` → "LaTeX Workshop" 검색 → 설치.
 
 ```
 secondary/outline.md 읽고, Section 1 (Introduction) 초안을 work_paper/main.tex에 작성해줘.
-primary/papers/ 에 있는 5편 논문과 secondary/summaries/ 의 요약을 참고해서 써줘.
+primary/papers/ 에 있는 3편 논문과 secondary/summaries/ 의 요약을 참고해서 써줘.
 ```
 
 **섹션 단위로 요청하세요.** 한 번에 "전체 논문 써줘"보다 품질이 높습니다:
@@ -84,6 +84,42 @@ main.tex의 Approaches 섹션에 넣어줘. 모든 수치가 비교표와 정확
 ```
 
 CLAUDE.md에 SSOT 규칙이 있으므로 Claude도 자동으로 대조합니다.
+
+### Figure / Table 제작
+
+04 아웃라인에서 정한 제작 방식에 따라 Claude에게 요청합니다:
+
+**matplotlib (수치 그래프):**
+
+```
+secondary/paper_comparison.md의 벤치마크 성능 데이터를 읽고
+막대 그래프를 Python matplotlib으로 그려줘.
+work_paper/figures/fig1.pdf로 저장해줘.
+```
+
+**TikZ (다이어그램):**
+
+```
+outline.md의 Figure 계획을 읽고 TikZ로 다이어그램을 그려줘.
+main.tex의 해당 섹션에 \begin{tikzpicture}로 직접 넣어줘.
+```
+
+**Mermaid (흐름도):**
+
+```
+outline.md의 Figure 계획을 읽고 Mermaid 코드를 만들어줘.
+mmdc -i fig1.mmd -o work_paper/figures/fig1.pdf로 변환해줘.
+```
+
+본문에 삽입:
+
+```
+main.tex의 해당 섹션에 Figure를 삽입해줘.
+\includegraphics로 work_paper/figures/fig1.pdf를 참조하고,
+캡션은 outline.md의 Figure 제목을 사용해줘.
+```
+
+Table은 비교표 변환에서 이미 만들어집니다 (위의 "비교표를 LaTeX 테이블로 변환" 참고).
 
 ### 인용 삽입
 
@@ -217,9 +253,4 @@ warning이 있으면 알려줘.
 
 > 💡 **Tip:** CLAUDE.md의 규칙은 구체적일수록 효과적입니다. "Be careful with citations"보다 "Every factual claim must have a `\cite{}`"가 Claude의 행동을 정확하게 제어합니다.
 
-## 참고 자료
-
-- [에이전트 팀 문헌 수집](./03-collection.md) — 논문을 대규모로 수집할 때
-- [NotebookLM CLI 연동](./02-notebooklm.md) — 논문 요약과 Deep Research
-- [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX) — LaTeX 기본 문법 참고
-- [Overleaf Documentation](https://www.overleaf.com/learn) — LaTeX 패키지 사용법
+→ Part2-Research의 최종 단계입니다. 완성된 PDF를 `work_paper/`에서 확인하세요.

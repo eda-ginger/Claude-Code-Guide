@@ -10,6 +10,9 @@
 # 텔레그램 관련 스킬
 .claude/skills/claudeclaw/
 
+# 논문 PDF (로컬에만 보관)
+primary/papers/*.pdf
+
 # 부록 (로컬에만 보관)
 docs/Part4-Appendix/
 

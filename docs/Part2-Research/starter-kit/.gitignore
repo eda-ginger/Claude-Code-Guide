@@ -1,0 +1,8 @@
+primary/papers/*.pdf
+work_paper/figures/
+work_paper/*.aux
+work_paper/*.bbl
+work_paper/*.blg
+work_paper/*.log
+work_paper/*.out
+work_paper/*.pdf

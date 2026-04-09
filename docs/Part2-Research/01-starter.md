@@ -84,19 +84,20 @@ source ~/.bashrc
 | `Ctrl+b` → `d` | 세션에서 나가기 (백그라운드 유지) |
 | `exit` | 완전 종료 |
 
-## 2. starter-kit 복사
+## 2. starter-kit 열기
 
-이 저장소에 포함된 starter-kit을 작업 디렉토리로 복사합니다:
+이 저장소에 포함된 starter-kit을 작업 공간으로 그대로 사용합니다:
 
 ```bash
-cp -r docs/Part2-Research/starter-kit ~/my-mini-review
-cd ~/my-mini-review
+cd docs/Part2-Research/starter-kit
 ```
+
+> 별도 복사 없이 저장소 안의 `starter-kit/` 폴더에서 직접 작업합니다.
 
 ## 3. 폴더 구조 이해하기
 
 ```
-my-mini-review/
+starter-kit/
 ├── CLAUDE.md                    # 프로젝트 규칙 (위키 규칙 + 학술 규칙)
 ├── primary/                     # 읽기 전용 원본
 │   ├── paper-list.md            # → 03에서 생성 (최종 논문 리스트)
@@ -156,7 +157,7 @@ starter-kit에 포함된 `CLAUDE.md`에는 두 가지 규칙이 설정되어 있
 | 단계 | 문서 | 하는 일 | 저장 위치 |
 |------|------|--------|----------|
 | 도구 설치 | [02-notebooklm](./02-notebooklm.md) | nlm CLI 설치·인증 | (도구 설치, 파일 없음) |
-| 논문 수집 | [03-collection](./03-collection.md) | 에이전트 팀으로 5편 수집 | `primary/papers/`, `primary/paper-list.md` |
+| 논문 수집 | [03-collection](./03-collection.md) | 에이전트 팀으로 3편 수집 | `primary/papers/`, `primary/paper-list.md` |
 | 지식 정리 | [04-llm-wiki](./04-llm-wiki.md) | 위키 구축 + 비교표·아웃라인 생성 | `secondary/` 전체 |
 | 연구 관리 | [05-obsidian](./05-obsidian.md) | Obsidian 대시보드 + 그래프 시각화 | `secondary/dashboard.md` |
 | 논문 작성 | [06-paper-writing](./06-paper-writing.md) | LaTeX 미니 리뷰 작성 | `work_paper/` |
@@ -166,8 +167,7 @@ starter-kit에 포함된 `CLAUDE.md`에는 두 가지 규칙이 설정되어 있
 | 문제 | 해결 방법 |
 |------|-----------|
 | starter-kit 폴더가 없음 | 저장소를 다시 clone: `git clone https://github.com/eda-ginger/Claude-Code-Guide.git` |
-| 복사 후 CLAUDE.md가 안 보임 | `ls -a ~/my-mini-review` — 숨김 파일 확인 |
-| 경로가 다름 | `~/my-mini-review` 대신 원하는 경로로 복사 가능 |
+| CLAUDE.md가 안 보임 | `ls -a docs/Part2-Research/starter-kit` — 숨김 파일 확인 |
 
 ---
 
