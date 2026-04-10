@@ -6,9 +6,9 @@
 
 | 상황 | 조치 |
 |------|------|
-| 03 수집이 안 될 때 | `snapshot/primary/` → `primary/`에 복사 |
-| 04 위키 구축이 안 될 때 | `snapshot/secondary/` → `secondary/`에 복사 |
-| 05 대시보드가 안 될 때 | `snapshot/secondary/dashboard.md` → `secondary/`에 복사 |
+| 03 수집이 안 될 때 | `.snapshot/primary/` → `primary/`에 복사 |
+| 04 위키 구축이 안 될 때 | `.snapshot/secondary/` → `secondary/`에 복사 |
+| 05 대시보드가 안 될 때 | `.snapshot/secondary/dashboard.md` → `secondary/`에 복사 |
 
 ## 주의
 

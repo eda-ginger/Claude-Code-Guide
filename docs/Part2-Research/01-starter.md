@@ -122,8 +122,9 @@ starter-kit/
 │   ├── paper_comparison.md      # → 04에서 생성 (비교표 SSOT)
 │   └── outline.md               # → 04에서 생성 (논문 아웃라인)
 └── work_paper/                  # LaTeX 집필 공간
-    ├── main.tex                 # → 06에서 사용 (원고)
-    └── references.bib           # → 06에서 사용 (참고문헌)
+    ├── template/                # OUP 저널 양식 (원본 보존)
+    ├── main.tex                 # → 06에서 생성 (template에서 복사)
+    └── figures/                 # → 06에서 생성 (그래프·다이어그램)
 ```
 
 | 폴더 | 역할 | 누가 수정? | 비유 |
