@@ -1,0 +1,47 @@
+/* Dashboard layout for Research Dashboard */
+.dashboard .markdown-preview-view {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Dataview tables */
+.dashboard .dataview.table-view-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+.dashboard .dataview.table-view-table thead tr {
+  background-color: var(--background-secondary);
+  border-bottom: 2px solid var(--background-modifier-border);
+}
+
+.dashboard .dataview.table-view-table th {
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.dashboard .dataview.table-view-table td {
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.dashboard .dataview.table-view-table tbody tr:hover {
+  background-color: var(--background-secondary);
+  transition: background-color 0.15s ease;
+}
+
+/* Section headings */
+.dashboard h2 {
+  border-bottom: 2px solid var(--interactive-accent);
+  padding-bottom: 4px;
+  margin-top: 2em;
+}
+
+/* Embedded outline */
+.dashboard .internal-embed {
+  border-left: 3px solid var(--interactive-accent);
+  padding-left: 12px;
+  margin: 1em 0;
+}
