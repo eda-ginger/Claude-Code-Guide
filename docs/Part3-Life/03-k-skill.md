@@ -91,7 +91,7 @@ k-skill-setup 스킬을 사용해서 공통 설정을 진행해줘
 | 스킬 | 설명 | 필요 조건 |
 |------|------|-----------|
 | SRT 예매 | SRT 열차 조회/예매 | SRT 계정 |
-| KTX 예매 | KTX 열차 조회/예매 | 코레일 계정 (anti-bot 차단 가능) |
+| KTX 예매 | KTX 열차 조회/예매 | 코레일 계정 (helper 스크립트로 anti-bot 해결) |
 | 토스증권 | 포트폴리오/시세 조회 | macOS + `tossctl` 로그인 |
 | 카카오톡 macOS CLI | 메시지 전송 | macOS + 카카오톡 앱 |
 | 부동산 실거래가 | 아파트/주택 거래 내역 | `DATA_GO_KR_API_KEY` |
@@ -143,8 +143,77 @@ k-skill-setup 스킬을 사용해서 공통 설정을 진행해줘
 | `NODE_PATH` 에러 | `echo $NODE_PATH`로 확인. 비어있으면 설정 재실행 |
 | Python import 에러 | `python3 -m pip install --upgrade SRTrain korail2 pycryptodome` |
 | 미세먼지 조회 실패 | k-skill-proxy 상태 확인. 일부 시간대 측정값 없음 |
-| SRT/KTX MACRO ERROR | 코레일 anti-bot 차단. 시간 간격 두고 재시도 |
+| SRT/KTX MACRO ERROR | 아래 KTX 예매 섹션의 helper 스크립트로 해결 |
+
+## 6. KTX 예매 실전 가이드
+
+`korail2` 패키지만으로는 코레일의 anti-bot(Dynapath) 차단에 걸립니다. k-skill의 helper 스크립트가 이를 우회합니다.
+
+### 사전 준비
+
+```bash
+# 패키지 설치
+python3 -m pip install korail2 pycryptodome
+
+# helper 스크립트 다운로드 (k-skill 설치 시 자동 포함)
+# 수동 설치가 필요하면:
+mkdir -p ~/.claude/skills/ktx-booking/scripts
+curl -sL https://raw.githubusercontent.com/NomaDamas/k-skill/main/scripts/ktx_booking.py \
+  -o ~/.claude/skills/ktx-booking/scripts/ktx_booking.py
+chmod +x ~/.claude/skills/ktx-booking/scripts/ktx_booking.py
+```
+
+### 인증 설정
+
+코레일 멤버십 번호(또는 전화번호)와 비밀번호를 환경변수로 설정합니다:
+
+```bash
+mkdir -p ~/.config/k-skill
+cat > ~/.config/k-skill/secrets.env << 'EOF'
+KSKILL_KTX_ID=멤버십번호
+KSKILL_KTX_PASSWORD=비밀번호
+EOF
+chmod 600 ~/.config/k-skill/secrets.env
+```
+
+### 사용 예시
+
+| 질문 방식 | 예상 결과 |
+|-----------|-----------|
+| `4월 15일 서울에서 부산 KTX 찾아줘` | 열차 목록 (시간, 좌석, 요금) |
+| `오전 9시 이후 KTX 중 제일 빠른 거 잡아줘` | 조회 → 확인 → 예약 |
+| `코레일 예약 확인해줘` | 현재 예약 목록 |
+| `KTX 예약 취소해줘` | 대상 확인 → 취소 |
+
+### CLI 직접 사용
+
+```bash
+# 조회
+python3 ~/.claude/skills/ktx-booking/scripts/ktx_booking.py \
+  search 서울 부산 20260415 090000 --limit 5
+
+# 예약 (조회 결과의 train_id 사용)
+python3 ~/.claude/skills/ktx-booking/scripts/ktx_booking.py \
+  reserve 서울 부산 20260415 090000 --train-id <train_id>
+
+# 예약 확인
+python3 ~/.claude/skills/ktx-booking/scripts/ktx_booking.py reservations
+
+# 취소
+python3 ~/.claude/skills/ktx-booking/scripts/ktx_booking.py cancel <reservation_id>
+```
+
+> 결제는 자동화하지 않습니다. 예약 후 구입 기한 내에 코레일 앱/웹에서 결제하세요.
+
+### KTX 트러블슈팅
+
+| 문제 | 해결 방법 |
+|------|-----------|
+| MACRO ERROR | helper 스크립트 미사용. 위 설치 절차 확인 |
+| No Results | 날짜/시간이 이미 지났거나, 해당 구간에 열차 없음 |
+| 로그인 실패 | 멤버십 번호/비밀번호 확인. `secrets.env` 퍼미션 600 |
+| `korail2` import 에러 | `python3 -m pip install --upgrade korail2 pycryptodome` |
 
 ---
 
-> 💡 **Tip:** 인증 없이 바로 쓸 수 있는 12개 스킬부터 시작하세요. 로또, KBO, 미세먼지, 지하철 도착 등 일상에서 자주 쓰는 것부터 익숙해지면 인증 스킬까지 확장할 수 있습니다.
+> 💡 **Tip:** 인증 없이 바로 쓸 수 있는 12개 스킬부터 시작하세요. KTX처럼 인증이 필요한 스킬은 helper 스크립트 설치와 credential 설정만 하면 동일하게 자연어로 사용할 수 있습니다.
