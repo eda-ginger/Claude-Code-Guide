@@ -7,6 +7,9 @@
 # 대용량 미디어 파일
 *.mp3
 
+# MCP 서버 로그
+*.log
+
 # 텔레그램 관련 스킬
 .claude/skills/claudeclaw/
 

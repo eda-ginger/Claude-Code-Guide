@@ -1,6 +1,6 @@
 ---
 name: session-pack
-description: 세션 종료 시 Memory, Handoff를 자동 정리. /pack
+description: 세션 종료 시 Memory, Handoff를 자동 정리. /session-pack
 user_invocable: true
 ---
 
@@ -9,7 +9,7 @@ user_invocable: true
 세션 중 대화한 내용을 3개 전문 에이전트가 병렬 분석하여 Memory와 Handoff에 자동 반영합니다.
 
 ## Trigger Keywords
-- `/pack` — 전체 분석 + 반영
+- `/session-pack` — 전체 분석 + 반영
 
 ## Architecture
 
@@ -366,7 +366,7 @@ mv ~/.claude/projects/{현재 프로젝트}/handoff/HANDOFF-{name}.md ~/.claude/
 | Skipped | N items | — |
 | Conflicts resolved | N items | Done |
 
-> 다음 세션에서 /pack 결과가 잘 반영되었는지 확인하세요.
+> 다음 세션에서 /session-pack 결과가 잘 반영되었는지 확인하세요.
 ```
 
 > "None" 선택 시: "No changes applied. Session pack cancelled." 만 출력.
