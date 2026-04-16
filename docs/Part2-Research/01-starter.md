@@ -25,13 +25,11 @@ brew install poppler
 
 필수는 아니지만 설치하면 실습이 편리합니다. 아래 명령을 순서대로 실행하세요.
 
-### 상태 표시줄 (Status Line)
+### 상태 표시줄 (claude-dashboard)
 
-Claude Code 하단에 컨텍스트 사용량, 비용 등을 실시간 표시합니다.
+Claude Code 하단에 컨텍스트 사용량, 비용, Rate Limit 등을 실시간 표시합니다. 설치부터 커스텀 테마 적용까지는 아래 문서를 참고하세요:
 
-```
-> /statusline 모델 이름과 컨텍스트 사용률을 프로그레스 바로 보여줘
-```
+→ [Claude Dashboard 설정](./00-dashboard.md)
 
 ### tmux — 세션 유지 환경
 

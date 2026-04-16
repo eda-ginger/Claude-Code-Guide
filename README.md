@@ -56,6 +56,7 @@ claude
 
 | # | 제목 | 설명 |
 |:-:|------|------|
+| 00 | [Claude Dashboard 설정](./docs/Part2-Research/00-dashboard.md) | claude-dashboard 플러그인 설치 + 커스텀 테마 적용 |
 | 01 | [미니 리뷰 프로젝트 시작하기](./docs/Part2-Research/01-starter.md) | 선택 설치, starter-kit 복사, 폴더 구조, 실습 흐름 |
 | 02 | [NotebookLM CLI 연동](./docs/Part2-Research/02-notebooklm.md) | nlm CLI 설치·인증·Skill 등록 |
 | 03 | [에이전트 팀 문헌 수집](./docs/Part2-Research/03-collection.md) | arXiv + DBLP 에이전트 팀으로 논문 3편 수집·선별 |
