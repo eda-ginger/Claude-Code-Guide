@@ -10,8 +10,8 @@
 # MCP 서버 로그
 *.log
 
-# 텔레그램 관련 스킬
-.claude/skills/claudeclaw/
+# 로컬 스킬 심링크 (프로젝트 전용 k-skill 연결, 로컬 전용)
+.claude/skills/
 
 # 논문 PDF (로컬에만 보관)
 primary/papers/*.pdf
