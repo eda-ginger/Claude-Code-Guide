@@ -80,14 +80,17 @@ claude
 
 ---
 
-## 포함된 스킬
+## 필수 스킬 설치
 
-이 저장소를 clone하면 아래 스킬이 자동으로 사용 가능합니다:
+이 가이드에서 사용하는 스킬은 직접 설치해야 합니다. 아래 명령으로 한 번에 준비할 수 있습니다:
 
-| 스킬 | 명령어 | 설명 |
-|------|--------|------|
-| **Session Pack** | `/session-pack` | 세션 종료 시 메모리 & 핸드오프 자동 정리 |
-| **NLM Skill** | `/nlm-skill` | NotebookLM CLI 사용 가이드 |
+| 스킬 | 용도 | 설치 명령 | 출처 |
+|------|------|-----------|------|
+| **k-skill** | 한국 생활 (KTX·택배·미세먼지 등 26개) | `npx --yes skills add NomaDamas/k-skill --all -g` | [NomaDamas/k-skill](https://github.com/NomaDamas/k-skill) |
+| **nlm-skill** | NotebookLM CLI 연동 | `nlm skill install claude-code` | [tcsenpai/nlm](https://github.com/tcsenpai/nlm) |
+| **session-pack** | 세션 종료 시 메모리·핸드오프 자동 정리 | `curl -sSL https://raw.githubusercontent.com/ten-builder/ten-builder/main/skills/setup.sh \| bash` | [ten-builder](https://github.com/ten-builder/ten-builder) |
+
+> 각 스킬의 상세 사용법은 해당 Part 가이드를 참고하세요. k-skill은 [Part3-03](./docs/Part3-Life/03-k-skill.md), nlm-skill은 [Part2-02](./docs/Part2-Research/02-notebooklm.md).
 
 ---
 
@@ -97,7 +100,7 @@ claude
 Claude-Code-Guide/
 ├── README.md
 ├── CLAUDE.md                          # 프로젝트 가이드라인
-├── .claude/skills/                    # 내장 스킬 (clone 시 자동 포함)
+├── .claude/skills/                    # 로컬 스킬 연결 (git 미추적, 위 설치 섹션 참고)
 └── docs/
     ├── Part1-Basic/                   # 이론 (3개)
     ├── Part2-Research/                # 연구·학습 실습 (6개)
