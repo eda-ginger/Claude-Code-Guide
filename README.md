@@ -87,7 +87,7 @@ claude
 | 스킬 | 용도 | 설치 명령 | 출처 |
 |------|------|-----------|------|
 | **k-skill** | 한국 생활 (KTX·택배·미세먼지 등 26개) | `npx --yes skills add NomaDamas/k-skill --all -g` | [NomaDamas/k-skill](https://github.com/NomaDamas/k-skill) |
-| **nlm-skill** | NotebookLM CLI 연동 | `nlm skill install claude-code` | [tcsenpai/nlm](https://github.com/tcsenpai/nlm) |
+| **nlm-skill** | NotebookLM CLI 연동 | `nlm skill install claude-code` | [jacob-bd/notebooklm-mcp-cli](https://github.com/jacob-bd/notebooklm-mcp-cli) |
 | **session-pack** | 세션 종료 시 메모리·핸드오프 자동 정리 | `curl -sSL https://raw.githubusercontent.com/ten-builder/ten-builder/main/skills/setup.sh \| bash` | [ten-builder](https://github.com/ten-builder/ten-builder) |
 
 > 각 스킬의 상세 사용법은 해당 Part 가이드를 참고하세요. k-skill은 [Part3-03](./docs/Part3-Life/03-k-skill.md), nlm-skill은 [Part2-02](./docs/Part2-Research/02-notebooklm.md).
