@@ -26,7 +26,7 @@
 npx --yes skills add NomaDamas/k-skill --all -g
 ```
 
-26개 스킬이 `~/.agents/skills/`에 설치되며, Claude Code에 자동으로 symlink 됩니다.
+40개+ 스킬이 `~/.agents/skills/`에 설치되며, Claude Code에 자동으로 symlink 됩니다. (upstream에서 수시로 추가되므로 정확한 개수는 [공식 저장소](https://github.com/NomaDamas/k-skill)에서 확인)
 
 ### 의존성 설치
 
